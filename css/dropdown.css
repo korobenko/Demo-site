@@ -1,0 +1,22 @@
+.dropdown {
+  position: relative; }
+  .dropdown.active .dropdown-caret .fa:before {
+    content: '\f106'; }
+  .dropdown.active .dropdown-menu {
+    display: block; }
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  z-index: 1000;
+  min-width: 10rem;
+  padding: 1.25rem;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); }
+
+.dropdown.top .dropdown-menu {
+    top: 100%; }
+.dropdown.bottom .dropdown-menu {
+    bottom: 0; }

@@ -1,0 +1,122 @@
+//----- Extends
+@mixin clearfix() {
+    &:after {
+        content:'';
+        display:table;
+        clear:both;
+    }
+}
+@mixin border-box() {
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+
+//----- Grid System
+$grid-columns: 12;
+$grid-spacing: 30px;
+
+$screen-min-sm: 768px;
+$screen-min-md: 992px;
+$screen-min-lg: 1200px;
+
+@mixin col-float($prefix) {
+  @for $i from 1 to $grid-columns+1 {
+    .col-#{$prefix}-#{$i} {
+        position: relative;
+        float:left;
+        width: percentage(($i / $grid-columns));
+        min-height: 1px;
+        padding-left: $grid-spacing/2;
+        padding-right: $grid-spacing/2;
+        @include border-box();
+    }
+  }
+}
+
+@mixin responsive($breakpoint,$prefix) {
+  @media (min-width: $breakpoint) {
+    @include col-float($prefix);
+  }
+}
+
+@mixin col-inline($prefix) {
+  @for $i from 1 to $grid-columns+1 {
+    .col-#{$prefix}-#{$i} {
+        position: relative;
+        display: inline-block;
+        width: percentage(($i / $grid-columns));
+        min-height: 1px;
+        padding-left: $grid-spacing/2;
+        padding-right: $grid-spacing/2;
+        font-size: 0.875rem;
+        @include border-box();
+    }
+  }
+}
+
+@mixin col-cell($prefix) {
+  @for $i from 1 to $grid-columns+1 {
+    .col-#{$prefix}-#{$i} {
+        position: relative;
+        display: table-cell;;
+        width: percentage(($i / $grid-columns));
+        padding-left: $grid-spacing/2;
+        padding-right: $grid-spacing/2;
+    }
+  }
+}
+
+@mixin col-position($prefix, $position) {
+  @for $i from 1 to $grid-columns+1 {
+    .col-#{$prefix}-#{$i}.#{$position} {
+      vertical-align: $position;
+    }
+  }
+}
+
+.container {
+    position: relative;
+    max-width: (1110+$grid-spacing);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $grid-spacing/2;
+    padding-right: $grid-spacing/2;
+    @include clearfix();
+}
+
+/*-------inline col!--------*/
+.row-inline {
+    position: relative;
+    font-size: 0;
+    margin-left: -$grid-spacing/2;
+    margin-right: -$grid-spacing/2;
+    @include clearfix();
+}
+@include col-inline(inline);
+@include col-position(inline, top);
+@include col-position(inline, middle);
+@include col-position(inline, bottom);
+
+/*-------table col!--------*/
+.row-table {
+    position: relative;
+    display: table;
+    width: 100%;
+}
+@include col-cell(cell);
+@include col-position(cell, top);
+@include col-position(cell, middle);
+@include col-position(cell, bottom);
+
+/*-------float col!--------*/
+.row {
+    position: relative;
+    margin-left: -$grid-spacing/2;
+    margin-right: -$grid-spacing/2;
+    @include clearfix();
+}
+@include col-float(xs);
+@include responsive($screen-min-sm, sm);
+@include responsive($screen-min-md, md);
+@include responsive($screen-min-lg, lg);
