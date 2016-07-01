@@ -1,0 +1,78 @@
+    @@include('templates/partilas/head.html')
+
+    @@include('templates/partilas/header.html', {
+        "link" : "index-5.html"
+    })
+
+    <!--main!-->
+    <main>
+        <!--breadcrumbs!-->
+        <section class="breadcrumbs">
+            <div class="container">
+                <ul class="breadcrumbs-list">
+                    <li class="breadcrumbs-child">
+                        <a href="javascript:;" class="breadcrumbs-link">Главная</a>
+                    </li>
+                    <li class="breadcrumbs-child">
+                        <span> > </span>
+                    </li>
+                    <li class="breadcrumbs-child">
+                        <span class="breadcrumbs-link active">Категории</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!--breadcrumbs!-->
+
+        <!--section!-->
+        <section class="section">
+            <div class="container">
+                <h1>Категории</h1>
+            </div>
+        </section>
+        <!--section!-->
+
+        <!--section!-->
+        <section class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-3">
+                        @@include('templates/partilas/category-block.html')
+                    </div>
+                    <div class="col-xs-3">
+                        @@include('templates/partilas/category-block.html')
+                    </div>
+                    <div class="col-xs-3">
+                        @@include('templates/partilas/category-block.html')
+                    </div>
+                    <div class="col-xs-3">
+                        @@include('templates/partilas/category-block.html')
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        @@include('templates/partilas/category-block.html')
+                    </div>
+                    <div class="col-xs-3">
+                        @@include('templates/partilas/category-block.html')
+                    </div>
+                    <div class="col-xs-3">
+                        @@include('templates/partilas/category-block.html')
+                    </div>
+                    <div class="col-xs-3">
+                        @@include('templates/partilas/category-block.html')
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--section!-->
+    </main>
+    <!--main!-->
+
+    @@include('templates/partilas/footer.html')
+
+    @@include('templates/partilas/popups.html')
+
+    <script async src="builds/all.min.js"></script>
+</body>
+</html>

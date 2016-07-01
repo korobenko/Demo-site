@@ -1,0 +1,83 @@
+    @@include('templates/partilas/head.html')
+
+    @@include('templates/partilas/header.html', {
+        "link" : "index-4.html"
+    })
+
+    <!--main!-->
+    <main>
+        <!--breadcrumbs!-->
+        <section class="breadcrumbs">
+            <div class="container">
+                <ul class="breadcrumbs-list">
+                    <li class="breadcrumbs-child">
+                        <a href="javascript:;" class="breadcrumbs-link">Главная</a>
+                    </li>
+                    <li class="breadcrumbs-child">
+                        <span> > </span>
+                    </li>
+                    <li class="breadcrumbs-child">
+                        <span class="breadcrumbs-link active">Контакты</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!--breadcrumbs!-->
+
+        <!--section!-->
+        <section class="section page-section">
+            <div class="container">
+                <header>
+                    <h1>Контакты</h1>
+                </header>
+                <article class="article">
+                    <p>Наша компания была создана в 1994 году на базе экспериментального производства Опытно-конструкторского технологического бюро Института механизации и электрификации сельского хозяйства.</p>
+                    <p>Усвоив школу производства и научного подхода к различным разработкам, мы приобрели огромный опыт в работе и перенесли его на собственное производство в Васильковском районе Киевской области.</p>
+                    <p>Исполняя требования времени на нашем предприятии с 2004 года внедрена система управления качеством в соответствии с требованиями ДСТУ ISO 9001-2001.</p>
+                    <p>Мы рады сотрудничеству с Вами.</p>
+                </article>
+            </div>
+        </section>
+        <!--section!-->
+
+        <!--section!-->
+        <section class="section">
+            <div class="container">
+                <div class="feedback">
+                    <div class="feedback-title">Обратная связь</div>
+                    <form>
+                        <div class="form-row">
+                            <input type="text" name="name" placeholder="Имя">
+                        </div>
+                        <div class="form-row">
+                            <input type="tel" name="tel" placeholder="Телефон">
+                        </div>
+                        <div class="form-row">
+                            <textarea name="text" placeholder="Комментарий"></textarea>
+                        </div>
+                        <div class="form-row">
+                            <button type="submit" class="submit-button">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!--section!-->
+
+        <!--section!-->
+        <section class="section">
+            <div id="map" class="map">
+                <iframe style="border: 0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6707.180485129011!2d-96.82804176681564!3d32.80312248096409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864e9eb2b81acba9%3A0xb70f9ba0525ebe58!2zMjA1MCBOIFN0ZW1tb25zIEZ3eSAjNzA1NCwgRGFsbGFzLCBUWCA3NTIwNywg0KHQv9C-0LvRg9GH0LXQvdGWINCo0YLQsNGC0Lgg0JDQvNC10YDQuNC60Lg!5e0!3m2!1suk!2sua!4v1457081753784" frameborder="0" width="600" height="350"></iframe>
+            </div>
+        </section>
+        <!--section!-->
+    </main>
+    <!--main!-->
+
+    @@include('templates/partilas/footer.html')
+
+    @@include('templates/partilas/popups.html')
+
+    <script async src="builds/all.min.js"></script>
+</body>
+</html>

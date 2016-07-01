@@ -1,0 +1,61 @@
+    @@include('templates/partilas/head.html')
+
+    @@include('templates/partilas/header.html', {
+        "link" : "index-3.html"
+    })
+
+    <!--main!-->
+    <main>
+        <!--breadcrumbs!-->
+        <section class="breadcrumbs">
+            <div class="container">
+                <ul class="breadcrumbs-list">
+                    <li class="breadcrumbs-child">
+                        <a href="javascript:;" class="breadcrumbs-link">Главная</a>
+                    </li>
+                    <li class="breadcrumbs-child">
+                        <span> > </span>
+                    </li>
+                    <li class="breadcrumbs-child">
+                        <a class="breadcrumbs-link">Блог</a>
+                    </li>
+                    <li class="breadcrumbs-child">
+                        <span> > </span>
+                    </li>
+                    <li class="breadcrumbs-child">
+                        <span class="breadcrumbs-link active">Статья блога</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!--breadcrumbs!-->
+
+        <!--section!-->
+        <section class="section page-section">
+            <div class="container">
+                <header>
+                    <time datetime="2016-06-30">30 июня 2016</time>
+                    <h1>Статья блога</h1>
+                </header>
+                <article class="article">
+                    <p>Наша компания была создана в 1994 году на базе экспериментального производства Опытно-конструкторского технологического бюро Института механизации и электрификации сельского хозяйства.</p>
+                    <p>Усвоив школу производства и научного подхода к различным разработкам, мы приобрели огромный опыт в работе и перенесли его на собственное производство в Васильковском районе Киевской области.</p>
+                    <p>Исполняя требования времени на нашем предприятии с 2004 года внедрена система управления качеством в соответствии с требованиями ДСТУ ISO 9001-2001.</p>
+                    <p>Мы рады сотрудничеству с Вами.</p>
+                </article>
+                <footer>
+
+                </footer>
+            </div>
+        </section>
+        <!--section!-->
+    </main>
+    <!--main!-->
+
+    @@include('templates/partilas/footer.html')
+
+    @@include('templates/partilas/popups.html')
+
+    <script async src="builds/all.min.js"></script>
+</body>
+</html>

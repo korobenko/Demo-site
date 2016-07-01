@@ -1,0 +1,112 @@
+    @@include('templates/partilas/head.html')
+
+    @@include('templates/partilas/header.html', {
+        "link" : "index-2.html"
+    })
+
+    <!--main!-->
+    <main>
+        <!--breadcrumbs!-->
+        <section class="breadcrumbs">
+            <div class="container">
+                <ul class="breadcrumbs-list">
+                    <li class="breadcrumbs-child">
+                        <a href="javascript:;" class="breadcrumbs-link">Главная</a>
+                    </li>
+                    <li class="breadcrumbs-child">
+                        <span> > </span>
+                    </li>
+                    <li class="breadcrumbs-child">
+                        <span class="breadcrumbs-link active">Блог</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!--breadcrumbs!-->
+
+        <!--section!-->
+        <section class="section">
+            <div class="container">
+                <h1>Блог</h1>
+            </div>
+        </section>
+        <!--section!-->
+
+        <!--section!-->
+        <section class="section">
+            <div class="container">
+                <div class="catalog-list">
+                    <section class="list-item">
+                        <div class="row-inline">
+                            <div class="col-inline-2 top">
+                                <header>
+                                    <figure class="list-item-image">
+                                        <a href="javascript:;"><img src="https://placeholdit.imgix.net/~text?txtsize=75&txt=200%C3%97200&w=200&h=200" width="200" height="200" alt="новость 1" title="новость 1"></a>
+                                    </figure>
+                                </header>
+                            </div>
+                            <div class="col-inline-10 top">
+                                <article>
+                                    <time datetime="2016-06-30">30 июня 2016</time>
+                                    <div class="list-item-title"><a href="javascript:;">Название тестовой новости 1</a></div>
+                                    <div class="list-item-description">
+                                        <p>Краткое описание тестовой новости 1</p>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="list-item">
+                        <div class="row-inline">
+                            <div class="col-inline-12 top">
+                                <article>
+                                    <time datetime="2016-06-30">30 июня 2016</time>
+                                    <div class="list-item-title"><a href="javascript:;">Название тестовой новости 2</a></div>
+                                    <div class="list-item-description">
+                                        <p>Краткое описание тестовой новости 2</p>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="list-item">
+                        <div class="row-inline">
+                            <div class="col-inline-2 top">
+                                <header>
+                                    <figure class="list-item-image">
+                                        <a href="javascript:;"><img src="https://placeholdit.imgix.net/~text?txtsize=75&txt=200%C3%97200&w=200&h=200" width="200" height="200" alt="новость 1" title="новость 1"></a>
+                                    </figure>
+                                </header>
+                            </div>
+                            <div class="col-inline-10 top">
+                                <article>
+                                    <time datetime="2016-06-30">30 июня 2016</time>
+                                    <div class="list-item-title"><a href="javascript:;">Название тестовой новости 3</a></div>
+                                    <div class="list-item-description">
+                                        <p>Краткое описание тестовой новости 3</p>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <ul class="pagination">
+                    <li class="disabled"><span>«</span></li>
+                    <li class="active"><span>1</span></li>
+                    <li><a href="javascript:;">2</a></li>
+                    <li><a href="javascript:;">3</a></li>
+                    <li><a href="javascript:;" rel="next">»</a></li>
+                </ul>
+            </div>
+        </section>
+        <!--section!-->
+    </main>
+    <!--main!-->
+
+    @@include('templates/partilas/footer.html')
+
+    @@include('templates/partilas/popups.html')
+
+    <script async src="builds/all.min.js"></script>
+</body>
+</html>

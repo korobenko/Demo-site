@@ -1,0 +1,184 @@
+    @@include('templates/partilas/head.html')
+
+    @@include('templates/partilas/header.html', {
+        "link" : "index-1.html"
+    })
+
+    <!--main!-->
+    <main>
+        <!--section!-->
+        <section class="section">
+            <div class="container">
+            <div id="main-slider" class="slider">
+                <div>
+                    <section class="main-slider-item">
+                        <header>
+                            <a href="javascript:;">
+                                <img src="https://placeholdit.imgix.net/~text?txtsize=75&txt=1920%C3%97500&w=1920&h=500" width="1920" height="500" alt="slide-1" title="slide-1">
+                            </a>
+                        </header>
+                        <article>
+                            <div class="main-slider-title">Название слайда 1</div>
+                            <div class="main-slider-description">
+                                <p>Каткое описание слайда</p>
+                            </div>
+                        </article>
+                    </section>
+                </div>
+                <div>
+                    <section class="main-slider-item">
+                        <header>
+                            <a href="javascript:;">
+                                <img src="https://placeholdit.imgix.net/~text?txtsize=75&txt=1920%C3%97500&w=1920&h=500" width="1920" height="500" alt="slide-2" title="slide-2">
+                            </a>
+                        </header>
+                        <article>
+                            <div class="main-slider-title">Название слайда 2</div>
+                            <div class="main-slider-description">
+                                <p>Каткое описание слайда</p>
+                            </div>
+                        </article>
+                    </section>
+                </div>
+            </div>
+        </section>
+        <!--section!-->
+
+        <!--section!-->
+        <section class="section">
+            <div class="container">
+                <div class="section-title">Топ товары</div>
+                <div data-show="4" data-scroll="3" class="carousel">
+                    <div>
+                        @@include('templates/partilas/product-block.html')
+                    </div>
+                    <div>
+                        @@include('templates/partilas/product-block.html')
+                    </div>
+                    <div>
+                        @@include('templates/partilas/product-block.html')
+                    </div>
+                    <div>
+                        @@include('templates/partilas/product-block.html')
+                    </div>
+                    <div>
+                        @@include('templates/partilas/product-block.html')
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--section!-->
+
+        <!--section!-->
+        <section class="section">
+            <div class="container">
+                <div class="section-title">Хиты продаж</div>
+                <div data-show="4" data-scroll="3" class="carousel">
+                    <div>
+                        @@include('templates/partilas/product-block.html')
+                    </div>
+                    <div>
+                        @@include('templates/partilas/product-block.html')
+                    </div>
+                    <div>
+                        @@include('templates/partilas/product-block.html')
+                    </div>
+                    <div>
+                        @@include('templates/partilas/product-block.html')
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--section!-->
+
+        <!--section!-->
+        <section class="section">
+            <div class="container">
+                <div class="section-title">Просмотренные товары</div>
+                <div data-show="4" data-scroll="3" class="carousel">
+                    <div>
+                        @@include('templates/partilas/product-block.html')
+                    </div>
+                    <div>
+                        @@include('templates/partilas/product-block.html')
+                    </div>
+                    <div>
+                        @@include('templates/partilas/product-block.html')
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--section!-->
+
+        <!--section!-->
+        <section class="section">
+            <div class="container">
+                <div class="section-title">Последние новости</div>
+                <div class="catalog-list">
+                    <section class="list-item">
+                        <div class="row-inline">
+                            <div class="col-inline-2 top">
+                                <header>
+                                    <figure class="list-item-image">
+                                        <a href="javascript:;"><img src="https://placeholdit.imgix.net/~text?txtsize=75&txt=200%C3%97200&w=200&h=200" width="200" height="200" alt="новость 1" title="новость 1"></a>
+                                    </figure>
+                                </header>
+                            </div>
+                            <div class="col-inline-10 top">
+                                <article>
+                                    <time datetime="2016-06-30">30 июня 2016</time>
+                                    <div class="list-item-title"><a href="javascript:;">Название тестовой новости 1</a></div>
+                                    <div class="list-item-description">
+                                        <p>Краткое описание тестовой новости 1</p>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="list-item">
+                        <div class="row-inline">
+                            <div class="col-inline-12 top">
+                                <article>
+                                    <time datetime="2016-06-30">30 июня 2016</time>
+                                    <div class="list-item-title"><a href="javascript:;">Название тестовой новости 2</a></div>
+                                    <div class="list-item-description">
+                                        <p>Краткое описание тестовой новости 2</p>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="list-item">
+                        <div class="row-inline">
+                            <div class="col-inline-2 top">
+                                <header>
+                                    <figure class="list-item-image">
+                                        <a href="javascript:;"><img src="https://placeholdit.imgix.net/~text?txtsize=75&txt=200%C3%97200&w=200&h=200" width="200" height="200" alt="новость 1" title="новость 1"></a>
+                                    </figure>
+                                </header>
+                            </div>
+                            <div class="col-inline-10 top">
+                                <article>
+                                    <time datetime="2016-06-30">30 июня 2016</time>
+                                    <div class="list-item-title"><a href="javascript:;">Название тестовой новости 3</a></div>
+                                    <div class="list-item-description">
+                                        <p>Краткое описание тестовой новости 3</p>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+        <!--section!-->
+    </main>
+    <!--main!-->
+
+    @@include('templates/partilas/footer.html')
+
+    @@include('templates/partilas/popups.html')
+
+    <script async src="builds/all.min.js"></script>
+</body>
+</html>

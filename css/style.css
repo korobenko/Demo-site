@@ -120,22 +120,6 @@ ul {
 figure {
   margin: 0; }
 
-.social {
-  padding: 10px 0 0; }
-
-.social-list {
-  list-style: none; }
-
-.social-child {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 6px; }
-  .social-child:last-child {
-    margin-right: 0; }
-
-.old-price {
-  text-decoration: line-through; }
-
 .section {
   margin: 20px 0 0; }
 
@@ -145,19 +129,48 @@ figure {
   line-height: 1;
   text-align: center; }
 
-.product-item {
-  padding: 0 5px; }
-
-.carousel {
-  padding: 0 0 30px; }
-  .carousel .slick-dots {
-    bottom: 0; }
-
-.seo {
-  padding: 10px 0;
-  background: #eeeeee; }
+.map iframe {
+  display: block;
+  width: 100%;
+  max-width: 100%; }
 
 /*---------Customs---------*/
+/*---------Breadcrumbs---------*/
+.breadcrumbs {
+  margin: 20px 0 0; }
+
+.breadcrumbs-list {
+  list-style-type: none; }
+
+.breadcrumbs-child {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 6px; }
+  .breadcrumbs-child:last-child {
+    margin-right: 0; }
+
+.breadcrumbs-link.active {
+  color: red; }
+
+/*---------Breadcrumbs---------*/
+/*---------Pagination---------*/
+.pagination {
+  padding: 10px 0;
+  text-align: center; }
+  .pagination ul {
+    list-style-type: none; }
+  .pagination li {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 6px; }
+    .pagination li:last-child {
+      margin-right: 0; }
+    .pagination li.disabled {
+      opacity: 0.5; }
+    .pagination li.active {
+      color: red; }
+
+/*---------Pagination---------*/
 /*---------Forms---------*/
 .form-row {
   padding: 5px 0; }
@@ -228,11 +241,11 @@ select::-ms-expand {
 
 /*---------Forms---------*/
 /*-----------Article-----------*/
-article table {
+.article table {
   margin-top: 20px; }
-  article table th, article table td {
+  .article table th, .article table td {
     padding: 5px; }
-article h1, article h2, article h3, article h4, article h5, article h6, article p, article img {
+.article h1, .article h2, .article h3, .article h4, .article h5, .article h6, .article p, .article img {
   padding-bottom: 15px; }
 
 /*-----------Article-----------*/
@@ -302,9 +315,52 @@ article h1, article h2, article h3, article h4, article h5, article h6, article 
     top: 35%;
     left: 30px; }
 
+.social {
+  padding: 10px 0 0; }
+
+.social-list {
+  list-style: none; }
+
+.social-child {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 6px; }
+  .social-child:last-child {
+    margin-right: 0; }
+
+.old-price {
+  text-decoration: line-through; }
+
+.product-item {
+  padding: 0 5px; }
+
+.carousel {
+  padding: 0 0 30px; }
+  .carousel .slick-dots {
+    bottom: 0; }
+
+.seo {
+  padding: 10px 0;
+  background: #eeeeee; }
+
+.list-item {
+  padding: 5px 0; }
+
 /*-----------Main-----------*/
+/*-----------Page-----------*/
+.page-section header time {
+  display: block;
+  padding: 0 0 5px; }
+.page-section article {
+  padding: 20px 0 0; }
+
+/*-----------Page-----------*/
 /*-----------Footer-----------*/
-.footer {
+.footer .seo {
+  margin: 0; }
+
+.footer-content {
+  margin: 0;
   padding: 10px 0;
   background: #d7d7d7; }
 
