@@ -1,0 +1,97 @@
+@@include('templates/partilas/head.html')
+
+@@include('templates/partilas/header.html', {
+    "link" : "index-9.html"
+})
+
+<!--main!-->
+<main>
+    <!--breadcrumbs!-->
+    <section class="breadcrumbs">
+        <div class="container">
+            <ul class="breadcrumbs-list">
+                <li class="breadcrumbs-child">
+                    <a href="javascript:;" class="breadcrumbs-link">Главная</a>
+                </li>
+                <li class="breadcrumbs-child">
+                    <span> > </span>
+                </li>
+                <li class="breadcrumbs-child">
+                    <span class="breadcrumbs-link active">Оформление заказа</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!--breadcrumbs!-->
+
+    <!--checkout-page!-->
+    <section class="section checkout-page">
+        <div class="container">
+            <!--section!-->
+            <section class="section">
+                <div class="row">
+                    <div class="col-xs-8 checkout-content">
+                        <form name="checkout-form">
+                            <div class="form-row">
+                                <input type="text" name="name" placeholder="Имя">
+                            </div>
+                            <div class="form-row">
+                                <select>
+                                    <option>Киев</option>
+                                    <option>Львов</option>
+                                </select>
+                            </div>
+                            <div class="form-row">
+                                <input type="tel" name="tel" placeholder="Телефон">
+                            </div>
+                            <div class="form-row">
+                                <input type="email" name="email" placeholder="Email">
+                            </div>
+                            <div class="form-row">
+                                <textarea name="text" placeholder="Комментарий"></textarea>
+                            </div>
+                            <div class="form-radio">
+                                <input id="delivery-1" type="radio" name="delivery">
+                                <label for="delivery-1">Курьером</label>
+                            </div>
+                            <div class="form-radio">
+                                <input id="delivery-2" type="radio" name="delivery">
+                                <label for="delivery-2">Самовывоз</label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-xs-4 checkout-sidebar">
+                        <div class="checkout-info">
+                            <div class="row-inline">
+                                <div class="col-inline-6">Сумма заказа:</div>
+                                <div class="col-inline-6"><span>600.00</span> грн</div>
+                            </div>
+                            <div class="row-inline">
+                                <div class="col-inline-6">Доставка:</div>
+                                <div class="col-inline-6"><span>0.00</span> грн</div>
+                            </div>
+                            <div class="row-inline">
+                                <div class="col-inline-6"><strong>К оплате:</strong></div>
+                                <div class="col-inline-6"><strong>600.00</strong> грн</div>
+                            </div>
+                        </div>
+                        <button id="checkout-button" type="button" class="submit-button">Заказ подтверждаю</button>
+                    </div>
+                </div>
+            </section>
+            <!--section!-->
+        </div>
+    </section>
+    <!--checkout-page!-->
+
+</main>
+<!--main!-->
+
+@@include('templates/partilas/footer.html')
+
+@@include('templates/partilas/popups.html')
+
+<script async src="builds/all.min.js"></script>
+
+</body>
+</html>

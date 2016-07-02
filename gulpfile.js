@@ -11,10 +11,12 @@ var css = [
     'fonts/font-awesome.min.css',
     'css/normalize.css',
     'css/grid.css',
+    'css/jq-rating.css',
     'css/slick.css',
     'css/dropdown.css',
     'css/popup.css',
-    'css/jq-rating.css',
+    'css/tabs.css',
+    'css/counter.css',
     'css/style.css'
 ];
 
@@ -22,12 +24,16 @@ var js = [
     'js/jquery.js',
     'js/jq-rating.min.js',
     'js/slick.js',
+    'js/jquery.maskedinput.js',
     'js/header.js',
     'js/dropdown.js',
     'js/popup.js',
+    'js/counter.js',
+    'js/tabs.js',
     'js/forms.js',
     'js/sliders.js',
     'js/rating.js',
+    'js/product-gallery.js',
     'js/script.js'
 ];
 

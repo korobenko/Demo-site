@@ -233,6 +233,36 @@ figure {
       opacity: 0;
       background: red; }
 
+.form-radio {
+  padding: 5px 0; }
+  .form-radio input[type="radio"] {
+    display: none; }
+    .form-radio input[type="radio"]:checked + label:after {
+      opacity: 1; }
+  .form-radio label {
+    position: relative;
+    padding-left: 20px;
+    min-height: 10px; }
+    .form-radio label:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 1px solid #dedede; }
+    .form-radio label:after {
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      content: '';
+      width: 6px;
+      height: 6px;
+      opacity: 0;
+      border-radius: 50%;
+      background: red; }
+
 input, select, textarea {
   width: 100%;
   padding: 10px;
@@ -271,23 +301,23 @@ select {
   appearance: none;
   text-indent: 0;
   color: #000;
-  background: url("../images/arrow.svg") 95% 50% no-repeat;
+  background: url("../images/arrow.svg") 100% 50% no-repeat;
   background-size: 12px; }
 
 select::-ms-expand {
   display: none; }
 
 ::-webkit-input-placeholder {
-  color: #000;
+  color: #ccc;
   text-overflow: ellipsis; }
 
 ::-moz-placeholder {
-  color: #000;
+  color: #ccc;
   text-overflow: ellipsis;
   opacity: 1; }
 
 ::-ms-input-placeholder {
-  color: #000;
+  color: #ccc;
   text-overflow: ellipsis; }
 
 .tranaparent-button {
@@ -296,6 +326,24 @@ select::-ms-expand {
   border: none;
   font-size: 0.875rem;
   line-height: 1; }
+
+.button {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 5px;
+  background: none;
+  border: 1px solid #dedede;
+  box-shadow: none;
+  border-radius: 0; }
+
+.submit-button {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 5px;
+  background: #eee;
+  border: 1px solid #dedede;
+  box-shadow: none;
+  border-radius: 0; }
 
 /*---------Forms---------*/
 /*-----------Article-----------*/
@@ -446,6 +494,26 @@ select::-ms-expand {
   padding: 10px 0; }
 
 /*-----------Catalog-----------*/
+/*-----------Product gallery-----------*/
+#product-gallery-additional {
+  padding: 0 0 30px; }
+  #product-gallery-additional .slick-dots {
+    bottom: 0; }
+
+.product-gallery-small {
+  border: 1px solid transparent;
+  text-align: center;
+  font-size: 0;
+  line-height: 1; }
+  .product-gallery-small.active {
+    border-color: red; }
+  .product-gallery-small img {
+    display: inline-block; }
+
+/*-----------Product gallery-----------*/
+.product-page {
+  padding: 0 0 40px; }
+
 /*-----------Page-----------*/
 .page-section header time {
   display: block;
@@ -454,6 +522,40 @@ select::-ms-expand {
   padding: 20px 0 0; }
 
 /*-----------Page-----------*/
+/*-----------Basket-----------*/
+.basket-item {
+  position: relative; }
+  .basket-item .small-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1; }
+
+.basket-item-body .price,
+.basket-item-body .counter,
+.basket-item-body .total-price {
+  display: inline-block;
+  vertical-align: middle; }
+
+/*-----------Basket-----------*/
+/*-----------Search result-----------*/
+.search-filter ul {
+  list-style-type: none; }
+.search-filter li {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 6px; }
+  .search-filter li:last-child {
+    margin-right: 0; }
+.search-filter a.active {
+  color: red; }
+
+/*-----------Search result-----------*/
+/*-----------Profile-----------*/
+.profile-menu-link.active {
+  color: red; }
+
+/*-----------Profile-----------*/
 /*-----------Footer-----------*/
 .footer .seo {
   margin: 0; }

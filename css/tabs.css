@@ -1,0 +1,21 @@
+.tab-container {
+    padding: 20px 0 0;
+  display: none;
+}
+  .tab-container.active {
+    display: block;
+}
+.tabs ul {
+    list-style-type: none;
+}
+.tabs li {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+.tabs li:last-child {
+    margin-right: 0;
+}
+.tabs li.active a {
+    color: red;
+}

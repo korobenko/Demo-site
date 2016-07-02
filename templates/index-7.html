@@ -1,0 +1,66 @@
+@@include('templates/partilas/head.html')
+
+@@include('templates/partilas/header.html', {
+    "link" : "index-8.html"
+})
+
+<!--main!-->
+<main>
+    <!--breadcrumbs!-->
+    <section class="breadcrumbs">
+        <div class="container">
+            <ul class="breadcrumbs-list">
+                <li class="breadcrumbs-child">
+                    <a href="javascript:;" class="breadcrumbs-link">Главная</a>
+                </li>
+                <li class="breadcrumbs-child">
+                    <span> > </span>
+                </li>
+                <li class="breadcrumbs-child">
+                    <span class="breadcrumbs-link active">Корзина</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!--breadcrumbs!-->
+
+    <!--basket-page!-->
+    <section class="section basket-page">
+        <div class="container">
+            <!--section!-->
+            <section class="section">
+                <div class="row">
+                    <div class="col-xs-8 basket-content">
+                        <div class="basket-list">
+                            @@include('templates/partilas/basket-item.html')
+                            @@include('templates/partilas/basket-item.html')
+                        </div>
+                    </div>
+                    <div class="col-xs-4 basket-sidebar">
+                        <div class="basket-info">
+                            <div class="row-inline">
+                                <div class="col-inline-6">Сумма заказа:</div>
+                                <div class="col-inline-6"><strong>600</strong> грн</div>
+                            </div>
+                            <a href="javascript:;" class="submit-button">Перейти к оформлению</a>
+                            <a href="javascript:;" class="button">Продолжить покупки</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--section!-->
+        </div>
+    </section>
+    <!--basket-page!-->
+    
+</main>
+<!--main!-->
+
+@@include('templates/partilas/footer.html')
+
+@@include('templates/partilas/popups.html')
+
+<script async src="builds/all.min.js"></script>
+
+</body>
+</html>

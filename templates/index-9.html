@@ -1,0 +1,94 @@
+@@include('templates/partilas/head.html')
+
+@@include('templates/partilas/header.html', {
+    "link" : "index-10.html"
+})
+
+<!--main!-->
+<main>
+    <!--breadcrumbs!-->
+    <section class="breadcrumbs">
+        <div class="container">
+            <ul class="breadcrumbs-list">
+                <li class="breadcrumbs-child">
+                    <a href="javascript:;" class="breadcrumbs-link">Главная</a>
+                </li>
+                <li class="breadcrumbs-child">
+                    <span> > </span>
+                </li>
+                <li class="breadcrumbs-child">
+                    <span class="breadcrumbs-link active">Результаты поиска</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!--breadcrumbs!-->
+
+    <!--search-result!-->
+    <section class="section search-result">
+        <div class="container">
+            <!--section!-->
+            <section class="section">
+                <div>По запросу "<span>парам-папам</span>" найдено 20 записей</div>
+                <!--section!-->
+                <section class="section">
+                    <div class="search-filter">
+                        <ul>
+                            <li><a href="javascript:;" class="active">Товары</a></li>
+                            <li><a href="javascript:;">Статьи</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        @@include('templates/partilas/catalog-sort.html')
+                        <div class="catalog-blocks">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    @@include('templates/partilas/product-block.html')
+                                </div>
+                                <div class="col-xs-4">
+                                    @@include('templates/partilas/product-block.html')
+                                </div>
+                                <div class="col-xs-4">
+                                    @@include('templates/partilas/product-block.html')
+                                </div>
+                                <div class="col-xs-4">
+                                    @@include('templates/partilas/product-block.html')
+                                </div>
+                                <div class="col-xs-4">
+                                    @@include('templates/partilas/product-block.html')
+                                </div>
+                                <div class="col-xs-4">
+                                    @@include('templates/partilas/product-block.html')
+                                </div>
+                                <div class="col-xs-4">
+                                    @@include('templates/partilas/product-block.html')
+                                </div>
+                                <div class="col-xs-4">
+                                    @@include('templates/partilas/product-block.html')
+                                </div>
+                                <div class="col-xs-4">
+                                    @@include('templates/partilas/product-block.html')
+                                </div>
+                            </div>
+                        </div>
+                        @@include('templates/partilas/pagination.html')
+                    </div>
+                </section>
+                <!--section!-->
+            </section>
+            <!--section!-->
+        </div>
+    </section>
+    <!--search-result!-->
+
+</main>
+<!--main!-->
+
+@@include('templates/partilas/footer.html')
+
+@@include('templates/partilas/popups.html')
+
+<script async src="builds/all.min.js"></script>
+
+</body>
+</html>

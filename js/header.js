@@ -27,7 +27,3 @@ var Header = {
     }
 
 }
-
-jQuery(function() {
-    Header.init();
-});

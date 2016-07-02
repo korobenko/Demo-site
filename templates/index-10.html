@@ -1,0 +1,101 @@
+@@include('templates/partilas/head.html')
+
+@@include('templates/partilas/header.html', {
+    "link" : "index-11.html"
+})
+
+<!--main!-->
+<main>
+    <!--breadcrumbs!-->
+    <section class="breadcrumbs">
+        <div class="container">
+            <ul class="breadcrumbs-list">
+                <li class="breadcrumbs-child">
+                    <a href="javascript:;" class="breadcrumbs-link">Главная</a>
+                </li>
+                <li class="breadcrumbs-child">
+                    <span> > </span>
+                </li>
+                <li class="breadcrumbs-child">
+                    <span class="breadcrumbs-link active">Личный кабинет</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!--breadcrumbs!-->
+
+    <!--profile-page!-->
+    <section class="section profile-page">
+        <div class="container">
+            <!--section!-->
+            <section class="section">
+                <div class="row">
+                    <div class="col-xs-3 profile-sidebar">
+                        <div class="profile-menu">
+                            <ul class="profile-menu-list">
+                                <li class="profile-menu-child">
+                                    <a href="javascript:;" class="profile-menu-link active">Персональные данные</a>
+                                </li>
+                                <li class="profile-menu-child">
+                                    <a href="javascript:;" class="profile-menu-link">Избранное</a>
+                                </li>
+                                <li class="profile-menu-child">
+                                    <a href="javascript:;" class="profile-menu-link">История покупок</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-9 profile-content">
+                        <form>
+                            <div class="form-row">
+                                <input type="email" name="email" placeholder="Email">
+                            </div>
+                            <div class="form-row">
+                                <input type="text" name="name" placeholder="Имя">
+                            </div>
+                            <div class="form-row">
+                                <input type="text" name="surname" placeholder="Фамилия">
+                            </div>
+                            <div class="form-row">
+                                <input type="password" name="password" placeholder="Пароль">
+                            </div>
+                            <div class="form-row">
+                                <input type="password" name="password-2" placeholder="Повторите пароль">
+                            </div>
+                            <div class="form-row">
+                                <button type="submit" class="submit-button">Сохранить</button>
+                            </div>
+                        </form>
+                        <form>
+                            <div class="form-row">
+                                <input type="password" name="old-password" placeholder="Старый пароль">
+                            </div>
+                            <div class="form-row">
+                                <input type="password" name="new-password" placeholder="Новый пароль">
+                            </div>
+                            <div class="form-row">
+                                <input type="password" name="retry-password" placeholder="Повторите пароль">
+                            </div>
+                            <div class="form-row">
+                                <button type="submit" class="submit-button">Сохранить</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <!--section!-->
+        </div>
+    </section>
+    <!--profile-page!-->
+
+</main>
+<!--main!-->
+
+@@include('templates/partilas/footer.html')
+
+@@include('templates/partilas/popups.html')
+
+<script async src="builds/all.min.js"></script>
+
+</body>
+</html>

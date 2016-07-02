@@ -1,0 +1,18 @@
+.counter {
+  -webkit-user-select: none;
+  -moz-user-select: none; }
+
+.counter-val, .counter-nav {
+  display: inline-block;
+  padding: 5px;
+  vertical-align: middle; }
+.counter-val {
+    width: auto; }
+.counter-nav {
+  text-decoration: none;
+  cursor: pointer; }
+  .counter-nav.default {
+    color: #ccc;
+    cursor: default; }
+  .counter-nav:active, .counter-nav:focus, .counter-nav:visited, .counter-nav:hover {
+    text-decoration: none; }

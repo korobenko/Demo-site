@@ -1,0 +1,99 @@
+@@include('templates/partilas/head.html')
+
+@@include('templates/partilas/header.html', {
+    "link" : "index-12.html"
+})
+
+<!--main!-->
+<main>
+    <!--breadcrumbs!-->
+    <section class="breadcrumbs">
+        <div class="container">
+            <ul class="breadcrumbs-list">
+                <li class="breadcrumbs-child">
+                    <a href="javascript:;" class="breadcrumbs-link">Главная</a>
+                </li>
+                <li class="breadcrumbs-child">
+                    <span> > </span>
+                </li>
+                <li class="breadcrumbs-child">
+                    <span class="breadcrumbs-link active">Личный кабинет</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!--breadcrumbs!-->
+
+    <!--profile-page!-->
+    <section class="section profile-page">
+        <div class="container">
+            <!--section!-->
+            <section class="section">
+                <div class="row">
+                    <div class="col-xs-3 profile-sidebar">
+                        <div class="profile-menu">
+                            <ul class="profile-menu-list">
+                                <li class="profile-menu-child">
+                                    <a href="javascript:;" class="profile-menu-link">Персональные данные</a>
+                                </li>
+                                <li class="profile-menu-child">
+                                    <a href="javascript:;" class="profile-menu-link active">Избранное</a>
+                                </li>
+                                <li class="profile-menu-child">
+                                    <a href="javascript:;" class="profile-menu-link">История покупок</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-9 profile-content">
+                        <div class="catalog-blocks">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    @@include('templates/partilas/favorite-block.html')
+                                </div>
+                                <div class="col-xs-4">
+                                    @@include('templates/partilas/favorite-block.html')
+                                </div>
+                                <div class="col-xs-4">
+                                    @@include('templates/partilas/favorite-block.html')
+                                </div>
+                                <div class="col-xs-4">
+                                    @@include('templates/partilas/favorite-block.html')
+                                </div>
+                                <div class="col-xs-4">
+                                    @@include('templates/partilas/favorite-block.html')
+                                </div>
+                                <div class="col-xs-4">
+                                    @@include('templates/partilas/favorite-block.html')
+                                </div>
+                                <div class="col-xs-4">
+                                    @@include('templates/partilas/favorite-block.html')
+                                </div>
+                                <div class="col-xs-4">
+                                    @@include('templates/partilas/favorite-block.html')
+                                </div>
+                                <div class="col-xs-4">
+                                    @@include('templates/partilas/favorite-block.html')
+                                </div>
+                            </div>
+                        </div>
+                        @@include('templates/partilas/pagination.html')
+                    </div>
+                </div>
+            </section>
+            <!--section!-->
+        </div>
+    </section>
+    <!--profile-page!-->
+
+</main>
+<!--main!-->
+
+@@include('templates/partilas/footer.html')
+
+@@include('templates/partilas/popups.html')
+
+<script async src="builds/all.min.js"></script>
+
+</body>
+</html>

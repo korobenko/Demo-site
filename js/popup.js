@@ -97,7 +97,3 @@ var Popup = {
         }
 
     }
-
-    jQuery(function() {
-        Popup.init();
-    });

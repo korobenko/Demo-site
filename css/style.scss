@@ -287,6 +287,43 @@ figure {
         }
     }
 }
+.form-radio {
+    padding: 5px 0;
+    input[type="radio"] {
+        display: none;
+        &:checked + label {
+            &:after {
+                opacity: 1;
+            }
+        }
+    }
+    label {
+        position: relative;
+        padding-left: 20px;
+        min-height: 10px;
+        &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 1px solid $border-color;
+        }
+        &:after {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            content: '';
+            width: 6px;
+            height: 6px;
+            opacity: 0;
+            border-radius: 50%;
+            background: $active-color;
+        }
+    }
+}
 label {}
 input, select, textarea {
   width: 100%;
@@ -326,15 +363,15 @@ select {
   appearance: none;
   text-indent: 0;
   color: $primary-color;
-  background: url('#{$image-src}/arrow.svg') 95% 50% no-repeat;
+  background: url('#{$image-src}/arrow.svg') 100% 50% no-repeat;
   background-size: 12px;
 }
 select::-ms-expand{
   display: none;
 }
-::-webkit-input-placeholder {color:$link-color; text-overflow: ellipsis;}
-::-moz-placeholder {color:$link-color; text-overflow: ellipsis; opacity: 1;}
-::-ms-input-placeholder {color:$link-color; text-overflow: ellipsis;}
+::-webkit-input-placeholder {color:#ccc; text-overflow: ellipsis;}
+::-moz-placeholder {color:#ccc; text-overflow: ellipsis; opacity: 1;}
+::-ms-input-placeholder {color:#ccc; text-overflow: ellipsis;}
 
 .tranaparent-button {
     background: none;
@@ -343,7 +380,24 @@ select::-ms-expand{
     font-size: 0.875rem;
     line-height: 1;
 }
-.submit-button {}
+.button {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px;
+    background: none;
+    border: 1px solid $border-color;
+    box-shadow: none;
+    border-radius: 0;
+}
+.submit-button {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px;
+    background: #eee;
+    border: 1px solid $border-color;
+    box-shadow: none;
+    border-radius: 0;
+}
 /*---------Forms---------*/
 
 /*-----------Article-----------*/
@@ -518,6 +572,31 @@ select::-ms-expand{
 }
 /*-----------Catalog-----------*/
 
+/*-----------Product gallery-----------*/
+#product-gallery-additional {
+    padding: 0 0 30px;
+    .slick-dots {
+        bottom: 0;
+    }
+}
+.product-gallery-small {
+    border: 1px solid transparent;
+    text-align: center;
+    font-size: 0;
+    line-height: 1;
+    &.active {
+        border-color: $active-color;
+    }
+    img {
+        display: inline-block;
+    }
+}
+/*-----------Product gallery-----------*/
+
+.product-page {
+    padding: 0 0 40px;
+}
+
 /*-----------Page-----------*/
 .page-section {
     header {
@@ -531,6 +610,55 @@ select::-ms-expand{
     }
 }
 /*-----------Page-----------*/
+
+/*-----------Basket-----------*/
+.basket-item {
+    position: relative;
+    .small-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+    }
+}
+.basket-item-body {
+    .price,
+    .counter,
+    .total-price {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+/*-----------Basket-----------*/
+
+/*-----------Search result-----------*/
+.search-filter {
+    ul {
+        list-style-type: none;
+    }
+    li {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 6px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    a {
+        &.active {
+            color: $active-color;
+        }
+    }
+}
+/*-----------Search result-----------*/
+
+/*-----------Profile-----------*/
+.profile-menu-link {
+    &.active {
+        color: $active-color;
+    }
+}
+/*-----------Profile-----------*/
 
 /*-----------Footer-----------*/
 .footer {

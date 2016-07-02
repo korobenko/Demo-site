@@ -28,6 +28,13 @@
     }
 
     jQuery(function() {
+        Header.init();
+        Popup.init();
+        Rating.init();
 
-        $('.dropdown').dropdown();
+        jQuery('.dropdown').dropdown();
+        jQuery('.tabs').tabs();
+        jQuery('.counter').counter();
+
+        jQuery("input[type='tel']").mask("+38 (999) 999-99-99");
     });
