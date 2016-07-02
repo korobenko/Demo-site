@@ -14,17 +14,20 @@ var css = [
     'css/slick.css',
     'css/dropdown.css',
     'css/popup.css',
+    'css/jq-rating.css',
     'css/style.css'
 ];
 
 var js = [
     'js/jquery.js',
+    'js/jq-rating.min.js',
     'js/slick.js',
     'js/header.js',
     'js/dropdown.js',
     'js/popup.js',
     'js/forms.js',
     'js/sliders.js',
+    'js/rating.js',
     'js/script.js'
 ];
 
@@ -66,9 +69,10 @@ gulp.task('scripts', function () {
 gulp.task('watch', function () {
     gulp.watch('templates/*.html', ['html']);
     gulp.watch('templates/*/*.html', ['html']);
-    gulp.watch('css/*.scss', ['sass']);
+    //gulp.watch('css/*.scss', ['sass']);
     gulp.watch(css, ['styles']);
     gulp.watch(js, ['scripts']);
 });
 
-gulp.task('default', ['html', 'sass', 'styles', 'scripts', 'watch']);
+//gulp.task('default', ['html', 'sass', 'styles', 'scripts', 'watch']);
+gulp.task('default', ['html', 'styles', 'scripts', 'watch']);

@@ -24,34 +24,53 @@
     </section>
     <!--breadcrumbs!-->
 
-    <!--section!-->
-    <section class="section">
-        <div class="container">
-            <h1>Каталог товаров</h1>
-        </div>
-    </section>
-    <!--section!-->
-
-    <!--section!-->
-    <section class="section">
+    <!--catalog-page!-->
+    <section class="section catalog-page">
         <div class="container">
             <div class="row">
-                <div class="col-xs-3">
-                    @@include('templates/partilas/category-block.html')
+                <div class="col-xs-3 catalog-sidebar">
+                    @@include('templates/partilas/catalog-filter.html')
                 </div>
-                <div class="col-xs-3">
-                    @@include('templates/partilas/category-block.html')
-                </div>
-                <div class="col-xs-3">
-                    @@include('templates/partilas/category-block.html')
-                </div>
-                <div class="col-xs-3">
-                    @@include('templates/partilas/category-block.html')
+                <div class="col-xs-9 catalog-content">
+                    <h1>Каталог товаров</h1>
+                    @@include('templates/partilas/catalog-sort.html')
+                    <div class="catalog-blocks">
+                        <div class="row">
+                            <div class="col-xs-4">
+                                @@include('templates/partilas/product-block.html')
+                            </div>
+                            <div class="col-xs-4">
+                                @@include('templates/partilas/product-block.html')
+                            </div>
+                            <div class="col-xs-4">
+                                @@include('templates/partilas/product-block.html')
+                            </div>
+                            <div class="col-xs-4">
+                                @@include('templates/partilas/product-block.html')
+                            </div>
+                            <div class="col-xs-4">
+                                @@include('templates/partilas/product-block.html')
+                            </div>
+                            <div class="col-xs-4">
+                                @@include('templates/partilas/product-block.html')
+                            </div>
+                            <div class="col-xs-4">
+                                @@include('templates/partilas/product-block.html')
+                            </div>
+                            <div class="col-xs-4">
+                                @@include('templates/partilas/product-block.html')
+                            </div>
+                            <div class="col-xs-4">
+                                @@include('templates/partilas/product-block.html')
+                            </div>
+                        </div>
+                    </div>
+                    @@include('templates/partilas/pagination.html')
                 </div>
             </div>
         </div>
     </section>
-    <!--section!-->
+    <!--catalog-page!-->
 </main>
 <!--main!-->
 
@@ -60,5 +79,11 @@
 @@include('templates/partilas/popups.html')
 
 <script async src="builds/all.min.js"></script>
+
+<link rel="stylesheet" property="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" type="text/css">
+<script async src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+<script async src="js/catalog.js"></script>
+
 </body>
 </html>

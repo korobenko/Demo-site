@@ -160,74 +160,490 @@
     </section>
     <!--breadcrumbs!-->
 
-    <!--section!-->
-    <section class="section">
-        <div class="container">
-            <h1>Каталог товаров</h1>
-        </div>
-    </section>
-    <!--section!-->
-
-    <!--section!-->
-    <section class="section">
+    <!--catalog-page!-->
+    <section class="section catalog-page">
         <div class="container">
             <div class="row">
-                <div class="col-xs-3">
-                    <div class="product-item">
+                <div class="col-xs-3 catalog-sidebar">
+                    <!--catalog-filter!-->
+<div class="catalog-filter">
+    <div class="catalog-filter-headline">Фильтр:</div>
+    <!--current!-->
+    <div class="catalog-filter-current">
+        <div class="filter-current-row">
+            <div class="filter-current-value">Черный</div>
+            <button type="button" class="small-close"></button>
+        </div>
+        <div class="filter-current-row">
+            <div class="filter-current-value">100 Грн</div>
+            <button type="button" class="small-close"></button>
+        </div>
+        <button type="button" class="button">Очистить все</button>
+    </div>
+    <!--current!-->
+    <!--all!-->
+    <div class="catalog-filter-all">
+        <section class="catalog-filter-section">
+            <div class="catalog-filter-title">Цвет:</div>
+            <div class="catalog-filter-data">
+                <div class="form-checkbox">
+                    <input id="form-checkbox-1" type="checkbox">
+                    <label for="form-checkbox-1">Черный</label>
+                </div>
+                <div class="form-checkbox">
+                    <input id="form-checkbox-2" type="checkbox">
+                    <label for="form-checkbox-2">Хакки</label>
+                </div>
+                <div class="form-checkbox">
+                    <input id="form-checkbox-3" type="checkbox">
+                    <label for="form-checkbox-3">Серый</label>
+                </div>
+            </div>
+        </section>
+        <section class="catalog-filter-section">
+            <div class="catalog-filter-title">Бренд:</div>
+            <div class="catalog-filter-data">
+                <div class="form-checkbox">
+                    <input id="form-checkbox-4" type="checkbox">
+                    <label for="form-checkbox-4">Бренд 1</label>
+                </div>
+                <div class="form-checkbox">
+                    <input id="form-checkbox-5" type="checkbox">
+                    <label for="form-checkbox-5">Бренд 2</label>
+                </div>
+                <div class="form-checkbox">
+                    <input id="form-checkbox-6" type="checkbox">
+                    <label for="form-checkbox-6">Бренд 3</label>
+                </div>
+            </div>
+        </section>
+        <section class="catalog-filter-section">
+            <div class="catalog-filter-title">Цена, грн:</div>
+            <div class="catalog-filter-data">
+                <div id="catalog-price"></div>
+                <div>
+                    <table>
+                        <tr>
+                            <td><input id="catalog-price-lower" type="text" value="1000"></td>
+                            <td>-</td>
+                            <td><input id="catalog-price-upper" type="text" value="5000"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!--all!-->
+</div>
+<!--catalog-filter!-->
+
+                </div>
+                <div class="col-xs-9 catalog-content">
+                    <h1>Каталог товаров</h1>
+                    <!--catalog-sort!-->
+<div class="catalog-sort">
+    <div class="row-inline">
+        <div class="col-inline-6 middle">
+            <div class="form-row">
+                <label for="catalog-sort">Сортировать:</label>
+                <select id="catalog-sort">
+                    <option>По названию</option>
+                    <option>По цене</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-inline-6 middle">
+            <div class="form-row right">
+                <label for="catalog-per-page">Показывать на странице</label>
+                <select id="catalog-per-page">
+                    <option>20</option>
+                    <option>40</option>
+                    <option>60</option>
+                    <option>100</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+<!--catalog-sort!-->
+
+                    <div class="catalog-blocks">
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <div class="product-item">
     <div class="product-item-header">
         <figure class="product-item-image">
             <a href="javascript:;"><img src="https://placeholdit.imgix.net/~text?txtsize=75&txt=280%C3%97200&w=280&h=200" width="280" height="200" alt="slide" title="slide"></a>
         </figure>
     </div>
     <div class="product-item-body">
-        <div class="product-item-title"><a href="javascript:;">Название категории 1</a></div>
+        <div class="product-item-title"><a href="javascript:;">Название товара 1</a></div>
+        <div class="product-item-price">
+            <div class="row-inline">
+                <div class="col-inline-6 middle">
+                    <div class="old-price">$490.00</div>
+                </div>
+                <div class="col-inline-6 middle">
+                    <div class="price">$390.00</div>
+                </div>
+            </div>
+        </div>
+        <div class="product-item-rating rating">
+            <span data-jq-rating
+                  data-jq-rating-editable="true"
+                  data-jq-rating-value="4.0000"
+                  data-jq-rating-stars-count="5"
+                  data-jq-rating-based-on="5">
+                <input class="reyting-input" type="hidden" data-jq-rating-grade />
+            </span>
+            <div class="message"></div>
+        </div>
+        <button type="button" class="button">Купить</button>
+        <button type="button">Добавить в сравнение</button>
+        <button type="button">Добавить в избранное</button>
+        <div>10 комментариев</div>
+        <div class="product-item-description">
+            <p>Краткое описание товара</p>
+        </div>
     </div>
 </div>
 
-                </div>
-                <div class="col-xs-3">
-                    <div class="product-item">
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="product-item">
     <div class="product-item-header">
         <figure class="product-item-image">
             <a href="javascript:;"><img src="https://placeholdit.imgix.net/~text?txtsize=75&txt=280%C3%97200&w=280&h=200" width="280" height="200" alt="slide" title="slide"></a>
         </figure>
     </div>
     <div class="product-item-body">
-        <div class="product-item-title"><a href="javascript:;">Название категории 1</a></div>
+        <div class="product-item-title"><a href="javascript:;">Название товара 1</a></div>
+        <div class="product-item-price">
+            <div class="row-inline">
+                <div class="col-inline-6 middle">
+                    <div class="old-price">$490.00</div>
+                </div>
+                <div class="col-inline-6 middle">
+                    <div class="price">$390.00</div>
+                </div>
+            </div>
+        </div>
+        <div class="product-item-rating rating">
+            <span data-jq-rating
+                  data-jq-rating-editable="true"
+                  data-jq-rating-value="4.0000"
+                  data-jq-rating-stars-count="5"
+                  data-jq-rating-based-on="5">
+                <input class="reyting-input" type="hidden" data-jq-rating-grade />
+            </span>
+            <div class="message"></div>
+        </div>
+        <button type="button" class="button">Купить</button>
+        <button type="button">Добавить в сравнение</button>
+        <button type="button">Добавить в избранное</button>
+        <div>10 комментариев</div>
+        <div class="product-item-description">
+            <p>Краткое описание товара</p>
+        </div>
     </div>
 </div>
 
-                </div>
-                <div class="col-xs-3">
-                    <div class="product-item">
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="product-item">
     <div class="product-item-header">
         <figure class="product-item-image">
             <a href="javascript:;"><img src="https://placeholdit.imgix.net/~text?txtsize=75&txt=280%C3%97200&w=280&h=200" width="280" height="200" alt="slide" title="slide"></a>
         </figure>
     </div>
     <div class="product-item-body">
-        <div class="product-item-title"><a href="javascript:;">Название категории 1</a></div>
+        <div class="product-item-title"><a href="javascript:;">Название товара 1</a></div>
+        <div class="product-item-price">
+            <div class="row-inline">
+                <div class="col-inline-6 middle">
+                    <div class="old-price">$490.00</div>
+                </div>
+                <div class="col-inline-6 middle">
+                    <div class="price">$390.00</div>
+                </div>
+            </div>
+        </div>
+        <div class="product-item-rating rating">
+            <span data-jq-rating
+                  data-jq-rating-editable="true"
+                  data-jq-rating-value="4.0000"
+                  data-jq-rating-stars-count="5"
+                  data-jq-rating-based-on="5">
+                <input class="reyting-input" type="hidden" data-jq-rating-grade />
+            </span>
+            <div class="message"></div>
+        </div>
+        <button type="button" class="button">Купить</button>
+        <button type="button">Добавить в сравнение</button>
+        <button type="button">Добавить в избранное</button>
+        <div>10 комментариев</div>
+        <div class="product-item-description">
+            <p>Краткое описание товара</p>
+        </div>
     </div>
 </div>
 
-                </div>
-                <div class="col-xs-3">
-                    <div class="product-item">
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="product-item">
     <div class="product-item-header">
         <figure class="product-item-image">
             <a href="javascript:;"><img src="https://placeholdit.imgix.net/~text?txtsize=75&txt=280%C3%97200&w=280&h=200" width="280" height="200" alt="slide" title="slide"></a>
         </figure>
     </div>
     <div class="product-item-body">
-        <div class="product-item-title"><a href="javascript:;">Название категории 1</a></div>
+        <div class="product-item-title"><a href="javascript:;">Название товара 1</a></div>
+        <div class="product-item-price">
+            <div class="row-inline">
+                <div class="col-inline-6 middle">
+                    <div class="old-price">$490.00</div>
+                </div>
+                <div class="col-inline-6 middle">
+                    <div class="price">$390.00</div>
+                </div>
+            </div>
+        </div>
+        <div class="product-item-rating rating">
+            <span data-jq-rating
+                  data-jq-rating-editable="true"
+                  data-jq-rating-value="4.0000"
+                  data-jq-rating-stars-count="5"
+                  data-jq-rating-based-on="5">
+                <input class="reyting-input" type="hidden" data-jq-rating-grade />
+            </span>
+            <div class="message"></div>
+        </div>
+        <button type="button" class="button">Купить</button>
+        <button type="button">Добавить в сравнение</button>
+        <button type="button">Добавить в избранное</button>
+        <div>10 комментариев</div>
+        <div class="product-item-description">
+            <p>Краткое описание товара</p>
+        </div>
     </div>
 </div>
+
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="product-item">
+    <div class="product-item-header">
+        <figure class="product-item-image">
+            <a href="javascript:;"><img src="https://placeholdit.imgix.net/~text?txtsize=75&txt=280%C3%97200&w=280&h=200" width="280" height="200" alt="slide" title="slide"></a>
+        </figure>
+    </div>
+    <div class="product-item-body">
+        <div class="product-item-title"><a href="javascript:;">Название товара 1</a></div>
+        <div class="product-item-price">
+            <div class="row-inline">
+                <div class="col-inline-6 middle">
+                    <div class="old-price">$490.00</div>
+                </div>
+                <div class="col-inline-6 middle">
+                    <div class="price">$390.00</div>
+                </div>
+            </div>
+        </div>
+        <div class="product-item-rating rating">
+            <span data-jq-rating
+                  data-jq-rating-editable="true"
+                  data-jq-rating-value="4.0000"
+                  data-jq-rating-stars-count="5"
+                  data-jq-rating-based-on="5">
+                <input class="reyting-input" type="hidden" data-jq-rating-grade />
+            </span>
+            <div class="message"></div>
+        </div>
+        <button type="button" class="button">Купить</button>
+        <button type="button">Добавить в сравнение</button>
+        <button type="button">Добавить в избранное</button>
+        <div>10 комментариев</div>
+        <div class="product-item-description">
+            <p>Краткое описание товара</p>
+        </div>
+    </div>
+</div>
+
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="product-item">
+    <div class="product-item-header">
+        <figure class="product-item-image">
+            <a href="javascript:;"><img src="https://placeholdit.imgix.net/~text?txtsize=75&txt=280%C3%97200&w=280&h=200" width="280" height="200" alt="slide" title="slide"></a>
+        </figure>
+    </div>
+    <div class="product-item-body">
+        <div class="product-item-title"><a href="javascript:;">Название товара 1</a></div>
+        <div class="product-item-price">
+            <div class="row-inline">
+                <div class="col-inline-6 middle">
+                    <div class="old-price">$490.00</div>
+                </div>
+                <div class="col-inline-6 middle">
+                    <div class="price">$390.00</div>
+                </div>
+            </div>
+        </div>
+        <div class="product-item-rating rating">
+            <span data-jq-rating
+                  data-jq-rating-editable="true"
+                  data-jq-rating-value="4.0000"
+                  data-jq-rating-stars-count="5"
+                  data-jq-rating-based-on="5">
+                <input class="reyting-input" type="hidden" data-jq-rating-grade />
+            </span>
+            <div class="message"></div>
+        </div>
+        <button type="button" class="button">Купить</button>
+        <button type="button">Добавить в сравнение</button>
+        <button type="button">Добавить в избранное</button>
+        <div>10 комментариев</div>
+        <div class="product-item-description">
+            <p>Краткое описание товара</p>
+        </div>
+    </div>
+</div>
+
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="product-item">
+    <div class="product-item-header">
+        <figure class="product-item-image">
+            <a href="javascript:;"><img src="https://placeholdit.imgix.net/~text?txtsize=75&txt=280%C3%97200&w=280&h=200" width="280" height="200" alt="slide" title="slide"></a>
+        </figure>
+    </div>
+    <div class="product-item-body">
+        <div class="product-item-title"><a href="javascript:;">Название товара 1</a></div>
+        <div class="product-item-price">
+            <div class="row-inline">
+                <div class="col-inline-6 middle">
+                    <div class="old-price">$490.00</div>
+                </div>
+                <div class="col-inline-6 middle">
+                    <div class="price">$390.00</div>
+                </div>
+            </div>
+        </div>
+        <div class="product-item-rating rating">
+            <span data-jq-rating
+                  data-jq-rating-editable="true"
+                  data-jq-rating-value="4.0000"
+                  data-jq-rating-stars-count="5"
+                  data-jq-rating-based-on="5">
+                <input class="reyting-input" type="hidden" data-jq-rating-grade />
+            </span>
+            <div class="message"></div>
+        </div>
+        <button type="button" class="button">Купить</button>
+        <button type="button">Добавить в сравнение</button>
+        <button type="button">Добавить в избранное</button>
+        <div>10 комментариев</div>
+        <div class="product-item-description">
+            <p>Краткое описание товара</p>
+        </div>
+    </div>
+</div>
+
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="product-item">
+    <div class="product-item-header">
+        <figure class="product-item-image">
+            <a href="javascript:;"><img src="https://placeholdit.imgix.net/~text?txtsize=75&txt=280%C3%97200&w=280&h=200" width="280" height="200" alt="slide" title="slide"></a>
+        </figure>
+    </div>
+    <div class="product-item-body">
+        <div class="product-item-title"><a href="javascript:;">Название товара 1</a></div>
+        <div class="product-item-price">
+            <div class="row-inline">
+                <div class="col-inline-6 middle">
+                    <div class="old-price">$490.00</div>
+                </div>
+                <div class="col-inline-6 middle">
+                    <div class="price">$390.00</div>
+                </div>
+            </div>
+        </div>
+        <div class="product-item-rating rating">
+            <span data-jq-rating
+                  data-jq-rating-editable="true"
+                  data-jq-rating-value="4.0000"
+                  data-jq-rating-stars-count="5"
+                  data-jq-rating-based-on="5">
+                <input class="reyting-input" type="hidden" data-jq-rating-grade />
+            </span>
+            <div class="message"></div>
+        </div>
+        <button type="button" class="button">Купить</button>
+        <button type="button">Добавить в сравнение</button>
+        <button type="button">Добавить в избранное</button>
+        <div>10 комментариев</div>
+        <div class="product-item-description">
+            <p>Краткое описание товара</p>
+        </div>
+    </div>
+</div>
+
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="product-item">
+    <div class="product-item-header">
+        <figure class="product-item-image">
+            <a href="javascript:;"><img src="https://placeholdit.imgix.net/~text?txtsize=75&txt=280%C3%97200&w=280&h=200" width="280" height="200" alt="slide" title="slide"></a>
+        </figure>
+    </div>
+    <div class="product-item-body">
+        <div class="product-item-title"><a href="javascript:;">Название товара 1</a></div>
+        <div class="product-item-price">
+            <div class="row-inline">
+                <div class="col-inline-6 middle">
+                    <div class="old-price">$490.00</div>
+                </div>
+                <div class="col-inline-6 middle">
+                    <div class="price">$390.00</div>
+                </div>
+            </div>
+        </div>
+        <div class="product-item-rating rating">
+            <span data-jq-rating
+                  data-jq-rating-editable="true"
+                  data-jq-rating-value="4.0000"
+                  data-jq-rating-stars-count="5"
+                  data-jq-rating-based-on="5">
+                <input class="reyting-input" type="hidden" data-jq-rating-grade />
+            </span>
+            <div class="message"></div>
+        </div>
+        <button type="button" class="button">Купить</button>
+        <button type="button">Добавить в сравнение</button>
+        <button type="button">Добавить в избранное</button>
+        <div>10 комментариев</div>
+        <div class="product-item-description">
+            <p>Краткое описание товара</p>
+        </div>
+    </div>
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="pagination">
+    <li class="disabled"><span>«</span></li>
+    <li class="active"><span>1</span></li>
+    <li><a href="javascript:;">2</a></li>
+    <li><a href="javascript:;">3</a></li>
+    <li><a href="javascript:;" rel="next">»</a></li>
+</ul>
 
                 </div>
             </div>
         </div>
     </section>
-    <!--section!-->
+    <!--catalog-page!-->
 </main>
 <!--main!-->
 
@@ -410,5 +826,11 @@
 
 
 <script async src="builds/all.min.js"></script>
+
+<link rel="stylesheet" property="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" type="text/css">
+<script async src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+<script async src="js/catalog.js"></script>
+
 </body>
 </html>

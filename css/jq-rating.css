@@ -1,0 +1,59 @@
+.reyting {
+    padding-top: 0.625rem;
+}
+.jq-rating {
+    font-size: 20px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+
+/* line 13, ../sass/jq-rating.scss */
+.jq-rating--editable .jq-rating-group {
+    cursor: pointer; }
+
+/* line 20, ../sass/jq-rating.scss */
+.jq-rating--level-xlow .jq-rating-group--hover {
+    color: #fa9f00; }
+
+/* line 25, ../sass/jq-rating.scss */
+.jq-rating--level-low .jq-rating-group--hover {
+    color: #fa9f00; }
+
+/* line 30, ../sass/jq-rating.scss */
+.jq-rating--level-medium .jq-rating-group--hover {
+    color: #fa9f00; }
+
+/* line 35, ../sass/jq-rating.scss */
+.jq-rating--level-high .jq-rating-group--hover {
+    color: #fa9f00; }
+
+/* line 40, ../sass/jq-rating.scss */
+.jq-rating--level-xhigh .jq-rating-group--hover {
+    color: #fa9f00; }
+
+/**
+ * Groups
+ */
+/* line 48, ../sass/jq-rating.scss */
+.jq-rating-group,
+.jq-rating-group--hover {
+    color: #EEE; }
+/* line 52, ../sass/jq-rating.scss */
+.jq-rating-group > span,
+.jq-rating-group--hover > span {
+    margin-right: 8px; }
+
+.jq-rating-group > span:last-child,
+.jq-rating-group--hover > span:last-child {
+    margin-right: 0;
+}
+
+/* line 56, ../sass/jq-rating.scss */
+.jq-rating-group--hover {
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out; }

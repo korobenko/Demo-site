@@ -134,6 +134,36 @@ figure {
   width: 100%;
   max-width: 100%; }
 
+.small-close {
+  position: relative;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: none;
+  box-shadow: none;
+  border: none;
+  outline: none; }
+  .small-close:before, .small-close:after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: red; }
+  .small-close:before {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+  .small-close:after {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg); }
+
 /*---------Customs---------*/
 /*---------Breadcrumbs---------*/
 .breadcrumbs {
@@ -174,6 +204,34 @@ figure {
 /*---------Forms---------*/
 .form-row {
   padding: 5px 0; }
+
+.form-checkbox {
+  padding: 5px 0; }
+  .form-checkbox input[type="checkbox"] {
+    display: none; }
+    .form-checkbox input[type="checkbox"]:checked + label:after {
+      opacity: 1; }
+  .form-checkbox label {
+    position: relative;
+    padding-left: 20px;
+    min-height: 10px; }
+    .form-checkbox label:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      width: 10px;
+      height: 10px;
+      border: 1px solid #dedede; }
+    .form-checkbox label:after {
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      content: '';
+      width: 6px;
+      height: 6px;
+      opacity: 0;
+      background: red; }
 
 input, select, textarea {
   width: 100%;
@@ -347,6 +405,47 @@ select::-ms-expand {
   padding: 5px 0; }
 
 /*-----------Main-----------*/
+/*-----------Catalog-----------*/
+.catalog-blocks {
+  padding: 10px 0 0; }
+  .catalog-blocks .col-xs-4 {
+    padding-top: 10px;
+    padding-bottom: 10px; }
+
+.catalog-sort {
+  padding: 20px 0 10px; }
+  .catalog-sort .form-row {
+    display: inline-block;
+    vertical-align: middle; }
+  .catalog-sort label, .catalog-sort select {
+    display: inline-block;
+    vertical-align: middle; }
+  .catalog-sort select {
+    width: auto; }
+
+.catalog-filter-headline {
+  font-size: 1.5625rem; }
+
+.catalog-filter-current {
+  padding: 20px 0 0; }
+
+.filter-current-row {
+  padding: 5px 0; }
+  .filter-current-row .small-close {
+    display: inline-block;
+    vertical-align: middle; }
+
+.filter-current-value {
+  display: inline-block;
+  vertical-align: middle; }
+
+.catalog-filter-all {
+  padding: 20px 0 0; }
+
+.catalog-filter-section {
+  padding: 10px 0; }
+
+/*-----------Catalog-----------*/
 /*-----------Page-----------*/
 .page-section header time {
   display: block;
@@ -377,3 +476,5 @@ select::-ms-expand {
 /*-----------Footer-----------*/
 /*-----------Media-----------*/
 /*-----------Media-----------*/
+
+/*# sourceMappingURL=style.css.map */
