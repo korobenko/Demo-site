@@ -1,28 +1,17 @@
 @@include('templates/partilas/head.html')
 
 @@include('templates/partilas/header.html', {
-    "link" : "index.html"
+    "link" : "index-13.html"
 })
 
 <!--main!-->
 <main>
-    <!--breadcrumbs!-->
-    <section class="breadcrumbs">
-        <div class="container">
-            <ul class="breadcrumbs-list">
-                <li class="breadcrumbs-child">
-                    <a href="javascript:;" class="breadcrumbs-link">Главная</a>
-                </li>
-                <li class="breadcrumbs-child">
-                    <span> > </span>
-                </li>
-                <li class="breadcrumbs-child">
-                    <span class="breadcrumbs-link active">Личный кабинет</span>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <!--breadcrumbs!-->
+    @@include('templates/partilas/breadcrumbs.html', {
+        "links" : {
+            "main" : "Главная",
+            "current" : "Личный кабинет"
+        }
+    })
 
     <!--profile-page!-->
     <section class="section profile-page">
@@ -32,15 +21,21 @@
                 <div class="row">
                     <div class="col-xs-3 profile-sidebar">
                         <div class="profile-menu">
-                            <ul class="profile-menu-list">
-                                <li class="profile-menu-child">
-                                    <a href="javascript:;" class="profile-menu-link">Персональные данные</a>
+                            <ul class="profile-menu-list" itemscope itemtype="http://schema.org/ItemList">
+                                <li class="profile-menu-child" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList">
+                                    <a itemprop="url" href="javascript:;" class="profile-menu-link" title="Персональные данные">
+                                        <span itemprop="name">Персональные данные</span>
+                                    </a>
                                 </li>
-                                <li class="profile-menu-child">
-                                    <a href="javascript:;" class="profile-menu-link">Избранное</a>
+                                <li class="profile-menu-child" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList">
+                                    <a itemprop="url" href="javascript:;" class="profile-menu-link" title="Избранное">
+                                        <span itemprop="name">Избранное</span>
+                                    </a>
                                 </li>
-                                <li class="profile-menu-child">
-                                    <a href="javascript:;" class="profile-menu-link active">История покупок</a>
+                                <li class="profile-menu-child" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList">
+                                    <a itemprop="url" href="javascript:;" class="profile-menu-link active" title="История покупок">
+                                        <span itemprop="name">История покупок</span>
+                                    </a>
                                 </li>
                             </ul>
                         </div>

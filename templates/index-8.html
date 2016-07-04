@@ -6,23 +6,12 @@
 
 <!--main!-->
 <main>
-    <!--breadcrumbs!-->
-    <section class="breadcrumbs">
-        <div class="container">
-            <ul class="breadcrumbs-list">
-                <li class="breadcrumbs-child">
-                    <a href="javascript:;" class="breadcrumbs-link">Главная</a>
-                </li>
-                <li class="breadcrumbs-child">
-                    <span> > </span>
-                </li>
-                <li class="breadcrumbs-child">
-                    <span class="breadcrumbs-link active">Оформление заказа</span>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <!--breadcrumbs!-->
+    @@include('templates/partilas/breadcrumbs.html', {
+        "links" : {
+            "main" : "Главная",
+            "current" : "Оформление заказа"
+        }
+    })
 
     <!--checkout-page!-->
     <section class="section checkout-page">
@@ -36,7 +25,7 @@
                                 <input type="text" name="name" placeholder="Имя">
                             </div>
                             <div class="form-row">
-                                <select>
+                                <select name="city">
                                     <option>Киев</option>
                                     <option>Львов</option>
                                 </select>
@@ -51,7 +40,7 @@
                                 <textarea name="text" placeholder="Комментарий"></textarea>
                             </div>
                             <div class="form-radio">
-                                <input id="delivery-1" type="radio" name="delivery">
+                                <input id="delivery-1" type="radio" name="delivery" checked>
                                 <label for="delivery-1">Курьером</label>
                             </div>
                             <div class="form-radio">

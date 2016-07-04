@@ -43,18 +43,36 @@
             <div class="row-inline">
                 <div class="col-inline-5 middle">
                     <div class="header-top-menu">
-                        <ul class="header-top-menu-list">
-                            <li class="header-top-menu-child"><a href="javascript:;" class="header-top-menu-link">Пункт 1</a></li>
-                            <li class="header-top-menu-child"><a href="javascript:;" class="header-top-menu-link">Пункт 2</a></li>
-                            <li class="header-top-menu-child"><a href="javascript:;" class="header-top-menu-link">Пункт 3</a></li>
-                            <li class="header-top-menu-child"><a href="javascript:;" class="header-top-menu-link">Пункт 4</a></li>
+                        <ul class="header-top-menu-list" itemscope itemtype="http://schema.org/ItemList">
+                            <li class="header-top-menu-child" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList">
+                                <a itemprop="url" href="javascript:;" class="header-top-menu-link" title="Пункт 1">
+                                    <span itemprop="name">Пункт 1</span>
+                                </a>
+                            </li>
+                            <li class="header-top-menu-child" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList">
+                                <a itemprop="url" href="javascript:;" class="header-top-menu-link" title="Пункт 2">
+                                    <span itemprop="name">Пункт 2</span>
+                                </a>
+                            </li>
+                            <li class="header-top-menu-child" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList">
+                                <a itemprop="url" href="javascript:;" class="header-top-menu-link" title="Пункт 3">
+                                    <span itemprop="name">Пункт 3</span>
+                                </a>
+                            </li>
+                            <li class="header-top-menu-child" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList">
+                                <a itemprop="url" href="javascript:;" class="header-top-menu-link" title="Пункт 4">
+                                    <span itemprop="name">Пункт 4</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-inline-3 middle">
-                    <div class="header-search">
-                        <form>
-                            <input type="text" name="q" placeholder="Поиск...">
+                    <div class="header-search" itemscope itemtype="http://schema.org/WebSite">
+                        <meta itemprop="url" content="http://vis-front.vis-design.com/demo-site/"/>
+                        <form itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
+                            <meta itemprop="target" content="http://vis-front.vis-design.com/demo-site//search?q={search_text}"/>
+                            <input itemprop="query-input" name="search_text" type="text" name="q" placeholder="Поиск..." required>
                             <button type="submit" class="tranaparent-button"><i class="fa fa-search"></i></button>
                         </form>
                     </div>
@@ -86,29 +104,51 @@
         <div class="container">
             <div class="row-inline">
                 <div class="col-inline-1 middle">
-                    <figure class="header-logo">
-                        <a href="index-7.html"><img src="https://placehold.it/200" width="100" height="50" alt="damo-site" title="demo-site"></a>
+                    <figure class="header-logo" itemscope itemtype="http://schema.org/Organization">
+                        <meta itemprop="name" content="Demo-site">
+                        <meta itemprop="email" content="mail@mail.com">
+                        <meta itemprop="address" content="Киев, пр. Победы 67">
+                        <meta itemprop="telephone" content="+380933334400">
+                        <a itemprop="url" href="index-7.html">
+                            <img itemprop="logo" src="https://placehold.it/200" width="100" height="50" alt="damo-site" title="demo-site">
+                        </a>
                     </figure>
                 </div>
                 <div class="col-inline-8 middle">
-                    <nav class="header-bottom-menu">
-                        <ul class="header-bottom-menu-list">
-                            <li class="header-bottom-menu-child"><a href="javascript:;" class="header-bottom-menu-link">Пункт 1</a></li>
-                            <li class="header-bottom-menu-child"><a href="javascript:;" class="header-bottom-menu-link">Пункт 2</a></li>
-                            <li class="header-bottom-menu-child"><a href="javascript:;" class="header-bottom-menu-link">Пункт 3</a></li>
-                            <li class="header-bottom-menu-child"><a href="javascript:;" class="header-bottom-menu-link">Пункт 4</a></li>
-                            <li class="header-bottom-menu-child"><a href="javascript:;" class="header-bottom-menu-link">Пункт 5</a></li>
+                    <nav class="header-bottom-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                        <ul class="header-bottom-menu-list" itemprop="about" itemscope itemtype="http://schema.org/ItemList">
+                            <li class="header-bottom-menu-child" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList">
+                                <a itemprop="url" href="javascript:;" class="header-bottom-menu-link" title="Пункт 1">
+                                    <span itemprop="name">Пункт 1</span>
+                                </a>
+                            </li>
+                            <li class="header-bottom-menu-child" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList">
+                                <a itemprop="url" href="javascript:;" class="header-bottom-menu-link" title="Пункт 2">
+                                    <span itemprop="name">Пункт 2</span>
+                                </a>
+                            </li>
+                            <li class="header-bottom-menu-child" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList">
+                                <a itemprop="url" href="javascript:;" class="header-bottom-menu-link" title="Пункт 3">
+                                    <span itemprop="name">Пункт 3</span>
+                                </a>
+                            </li>
+                            <li class="header-bottom-menu-child" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList">
+                                <a itemprop="url" href="javascript:;" class="header-bottom-menu-link" title="Пункт 4">
+                                    <span itemprop="name">Пункт 4</span>
+                                </a>
+                            </li>
+                            <li class="header-bottom-menu-child" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList">
+                                <a itemprop="url" href="javascript:;" class="header-bottom-menu-link" title="Пункт 5">
+                                    <span itemprop="name">Пункт 5</span>
+                                </a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
                 <div class="col-inline-3 middle">
-                    <div class="header-contact" itemscope itemtype="http://schema.org/Organization">
-                        <span style="display: none" itemprop="name">Общество с ограниченной ответственностью Demo-site</span>
-                        <div style="display: none" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
-                            Юридический адрес: 119049, г. Киев
-                        </div>
+                    <div class="header-contact">
                         <p><a href="mailto:mail@mail.com">mail@mail.com</a></p>
-                        <p><a href="tel:(093) 333-44-00"><span itemprop="telephone">(093) 333-44-00</span></a></p>
+                        <p><a href="tel:(093) 333-44-00">(093) 333-44-00</span></p>
                     </div>
                     <div class="header-callback">
                         <div id="callback" class="dropdown">
@@ -143,31 +183,26 @@
 <!--main!-->
 <main>
     <!--breadcrumbs!-->
-    <section class="breadcrumbs">
-        <div class="container">
-            <ul class="breadcrumbs-list">
-                <li class="breadcrumbs-child">
-                    <a href="javascript:;" class="breadcrumbs-link">Главная</a>
-                </li>
-                <li class="breadcrumbs-child">
-                    <span> > </span>
-                </li>
-                <li class="breadcrumbs-child">
-                    <a class="breadcrumbs-link active">Каталог товаров</a>
-                </li>
-                <li class="breadcrumbs-child">
-                    <span> > </span>
-                </li>
-                <li class="breadcrumbs-child">
-                    <span class="breadcrumbs-link active">Название тестового товара 1</span>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <!--breadcrumbs!-->
+<section class="breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#">
+    <div class="container">
+        <ul class="breadcrumbs-list">
+            <li class="breadcrumbs-child" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a itemprop="url" href="javascript:;" class="breadcrumbs-link">Главная</a>
+            </li>
+            <li class="breadcrumbs-child">
+                <span> > </span>
+            </li>
+            <li class="breadcrumbs-child" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a itemprop="url" href="javascript:;" class="breadcrumbs-link active">Название тестового товара 1</a>
+            </li>
+        </ul>
+    </div>
+</section>
+<!--breadcrumbs!-->
+
 
     <!--product-page!-->
-    <section class="section product-page">
+    <section class="section product-page" itemscope itemtype="http://schema.org/Product">
         <div class="container">
             <!--section!-->
             <section class="section">
@@ -225,7 +260,7 @@
                             <div class="message"></div>
                         </div>
                         <button type="button" class="button">Купить</button>
-                        <button type="button" class="button" data-popup data-target="#buy-one-click">Купить в 1 клик</button>
+                        <button type="button" class="button" data-popup data-target="#buy-one-click-popup">Купить в 1 клик</button>
                         <button type="button" class="button">Добавить в сравнение</button>
                         <button type="button" class="button">Добавить в избранное</button>
                         <div>10 комментариев</div>
@@ -237,13 +272,13 @@
             <section class="section">
                 <div id="product-tabs" class="tabs">
                     <ul>
-                        <li class="active"><a data-id="product-tab-all, product-tab-description, product-tab-haracteristics" href="javascript:;">Все</a></li>
-                        <li><a data-id="product-tab-description" href="javascript:;">Описание</a></li>
-                        <li><a data-id="product-tab-haracteristics" href="javascript:;">Характеристики</a></li>
+                        <li data-tab class="active"><button type="button" data-tab-button data-id="product-tab-all, product-tab-description, product-tab-haracteristics" class="button">Все</button></li>
+                        <li data-tab><button type="button" data-tab-button data-id="product-tab-description" class="button">Описание</button></li>
+                        <li data-tab><button type="button" data-tab-button data-id="product-tab-haracteristics" class="button">Характеристики</button></li>
                     </ul>
                 </div>
                 <div data-parent-id="product-tabs" id="product-tab-description" class="tab-container active">
-                    <article class="article">
+                    <article class="article" itemprop="description">
                         <h2>Описание</h2>
                         <p>Деловые переговоры и многочасовые встречи с партнерами, офисные совещания и длительное изучение документов – все эти служебные обязанности можно с лёгкостью пережить, комфортно устроившись в кресле Атлант. Это стильное и солидное кресло, которое идеально подходит для руководителя компании или управляющего фирмы. Оно по всем своим характеристикам соответствует основным требованиям, предъявляемым к креслу руководителя среднего звена. Атлант имеет высокую спинку, глубокую и широкую посадку, отлично подойдет для людей высокого и среднего роста. Эргономичные изгибы сидения и спинки в </p>
                     </article>
@@ -258,6 +293,136 @@
                 </div>
             </section>
             <!--section!-->
+            <!--section!-->
+<section class="section">
+    <div class="container">
+        <div class="product-review" itemscope itemtype="http://schema.org/Review">
+            <div class="product-review-header">
+                <div class="row-inline">
+                    <div class="col-inline-6 middle">
+                        <div class="product-review-title">Отзывы <span>(2)</span></div>
+                    </div>
+                    <div class="col-inline-6 middle">
+                        <div class="text-right">
+                            <button type="button" class="submit-button" data-popup data-target="#product-review-popup">Оставить отзыв</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-review-body">
+                <section class="product-review-item">
+                    <figure>
+                        <img src="https://placeholdit.imgix.net/~text?txtsize=75&txt=40%C3%9740&w=40&h=40" width="40" height="40" alt="user" title="user">
+                    </figure>
+                    <div class="review-item-content">
+                        <header>
+                            <div itemprop="author">Татьяна</div>
+                            <time datetime="2016-06-30">30 июня 2016</time>
+                        </header>
+                        <article itemprop="description">
+                            <p>Давно хотела приобрести вышивальную машину, облазила в поисках весь интернет, прочитала кучу описаний к машинам и отзывов. Решила, что лучше все-таки, чтобы машина и шила и вывышивала. Остановилась на Janome MC 9900 и не жалею. Цена, конечно, не маленькая, но она того стоит. Большое разнообразие красивых швов, простое управление, работает машинка тихо, плавно переходит на любую скорость, сама обрезает нитку.   Швейный советник подсказывает практически каждый шаг.
+Качество вышивки прекрасное, много встроенных дизайнов, а так же легко читает дизайны с флешки. Машина даже сама форматирует флешку.
+В общем, не нарадуюсь на свою красавицу.
+Еще хочу сказать, что в магазине работают отзыв профессиональные и отзывчивые люди, подсказывают, консультируют, заказ доставили вовремя, без проблем. Спасибо!!!</p>
+                        </article>
+                        <footer>
+                            <button type="button" class="button" data-popup data-target="#product-add-review-popup">Ответить</button>
+                        </footer>
+                    </div>
+                </section>
+                <section class="product-review-item">
+                    <figure>
+                        <img src="https://placeholdit.imgix.net/~text?txtsize=75&txt=40%C3%9740&w=40&h=40" width="40" height="40" alt="user" title="user">
+                    </figure>
+                    <div class="review-item-content">
+                        <header>
+                            <div itemprop="author">Татьяна</div>
+                            <time datetime="2016-06-30">30 июня 2016</time>
+                        </header>
+                        <article itemprop="description">
+                            <p>Давно хотела приобрести вышивальную машину, облазила в поисках весь интернет, прочитала кучу описаний к машинам и отзывов. Решила, что лучше все-таки, чтобы машина и шила и вывышивала. Остановилась на Janome MC 9900 и не жалею. Цена, конечно, не маленькая, но она того стоит. Большое разнообразие красивых швов, простое управление, работает машинка тихо, плавно переходит на любую скорость, сама обрезает нитку.   Швейный советник подсказывает практически каждый шаг.
+Качество вышивки прекрасное, много встроенных дизайнов, а так же легко читает дизайны с флешки. Машина даже сама форматирует флешку.
+В общем, не нарадуюсь на свою красавицу.
+Еще хочу сказать, что в магазине работают отзыв профессиональные и отзывчивые люди, подсказывают, консультируют, заказ доставили вовремя, без проблем. Спасибо!!!</p>
+                        </article>
+                        <footer>
+                            <section class="product-review-item">
+                                <figure>
+                                    <img src="https://placeholdit.imgix.net/~text?txtsize=75&txt=40%C3%9740&w=40&h=40" width="40" height="40" alt="user" title="user">
+                                </figure>
+                                <div class="review-item-content">
+                                    <header>
+                                        <div itemprop="author">Татьяна</div>
+                                        <time datetime="2016-06-30">30 июня 2016</time>
+                                    </header>
+                                    <article itemprop="description">
+                                        <p>Давно хотела приобрести вышивальную машину, облазила в поисках весь интернет, прочитала кучу описаний к машинам и отзывов. Решила, что лучше все-таки, чтобы машина и шила и вывышивала. Остановилась на Janome MC 9900 и не жалею. Цена, конечно, не маленькая, но она того стоит. Большое разнообразие красивых швов, простое управление, работает машинка тихо, плавно переходит на любую скорость, сама обрезает нитку.   Швейный советник подсказывает практически каждый шаг.
+Качество вышивки прекрасное, много встроенных дизайнов, а так же легко читает дизайны с флешки. Машина даже сама форматирует флешку.
+В общем, не нарадуюсь на свою красавицу.
+Еще хочу сказать, что в магазине работают отзыв профессиональные и отзывчивые люди, подсказывают, консультируют, заказ доставили вовремя, без проблем. Спасибо!!!</p>
+                                    </article>
+                                    <footer>
+                                        <button type="button" class="button" data-popup data-target="#product-answer-review-popup">Ответить</button>
+                                    </footer>
+                                </div>
+                            </section>
+                        </footer>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</section>
+<!--section!-->
+
+<div id="product-review-popup" class="popup-container">
+    <div class="popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <div class="popup-title">Оставить отзыв</div>
+                <button type="button" data-popup-close class="popup-close"><i class="fa fa-times"></i></button>
+            </div>
+            <div class="popup-body">
+                <form name="product-review-form">
+                    <div class="form-row">
+                        <textarea name="text" placeholder="Ваш текст"></textarea>
+                    </div>
+                    <div class="form-row">
+                        <button type="submit" class="submit-button">Опубликовать</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="product-answer-review-popup" class="popup-container">
+    <div class="popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <div class="popup-title">Ответить на отзыв</div>
+                <button type="button" data-popup-close class="popup-close"><i class="fa fa-times"></i></button>
+            </div>
+            <div class="popup-body">
+                <form name="product-answer-review-form">
+                    <div class="form-row">
+                        <input type="email" name="email" placeholder="Email">
+                    </div>
+                    <div class="form-row">
+                        <input type="text" name="name" placeholder="Имя">
+                    </div>
+                    <div class="form-row">
+                        <textarea name="text" placeholder="Ваш текст"></textarea>
+                    </div>
+                    <div class="form-row">
+                        <button type="submit" class="submit-button">Опубликовать</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
             <!--section!-->
             <section class="section">
                 <div class="container">
@@ -540,7 +705,7 @@
                 <button type="button" data-popup-close class="popup-close"><i class="fa fa-times"></i></button>
             </div>
             <div class="popup-body">
-                <form>
+                <form name="login-form">
                     <div class="form-row">
                         <input type="email" name="email" placeholder="Email">
                     </div>
@@ -585,7 +750,7 @@
                 <button type="button" data-popup-close class="popup-close"><i class="fa fa-times"></i></button>
             </div>
             <div class="popup-body">
-                <form>
+                <form name="registration-form">
                     <div class="form-row">
                         <input type="email" name="email" placeholder="Email">
                     </div>
@@ -599,7 +764,7 @@
                         <input type="password" name="password" placeholder="Пароль">
                     </div>
                     <div class="form-row">
-                        <input type="password" name="password-2" placeholder="Повторите пароль">
+                        <input type="password" name="password_2" placeholder="Повторите пароль">
                     </div>
                     <div class="form-row">
                         <button type="submit" class="submit-button">Зарегистрироваться</button>
@@ -633,7 +798,7 @@
                 <button type="button" data-popup-close class="popup-close"><i class="fa fa-times"></i></button>
             </div>
             <div class="popup-body">
-                <form>
+                <form name="password-form">
                     <div class="form-row">
                         <input type="email" name="email" placeholder="Email">
                     </div>
@@ -652,8 +817,8 @@
 </div>
 
 
-<!--password!-->
-<div id="buy-one-click" class="popup-container">
+<!--buy-one-click!-->
+<div id="buy-one-click-popup" class="popup-container">
     <div class="popup">
         <div class="popup-content">
             <div class="popup-header">
@@ -661,7 +826,7 @@
                 <button type="button" data-popup-close class="popup-close"><i class="fa fa-times"></i></button>
             </div>
             <div class="popup-body">
-                <form>
+                <form name="buy-one-click-form">
                     <div class="form-row">
                         <input type="tel" name="tel">
                     </div>

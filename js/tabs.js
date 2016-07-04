@@ -9,12 +9,12 @@
                 //var settings = $.extend({}, options);
                 var self = $(this);
 
-                self.find('li a').click(function() {
+                self.find('[data-tab-button]').click(function() {
                     var $this = $(this),
                         ids = $this.attr('data-id').split(',');
 
-                    self.find('li').removeClass('active');
-                    $this.closest('li').addClass('active');
+                    self.find('[data-tab]').removeClass('active');
+                    $this.closest('[data-tab]').addClass('active');
 
                     $('.tab-container[ data-parent-id = "'+self.attr('id')+'" ]').removeClass('active');
 

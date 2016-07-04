@@ -180,7 +180,9 @@ figure {
     margin-right: 0; }
 
 .breadcrumbs-link.active {
-  color: red; }
+  color: red;
+  cursor: default;
+  text-decoration: none; }
 
 /*---------Breadcrumbs---------*/
 /*---------Pagination---------*/
@@ -270,6 +272,8 @@ input, select, textarea {
   outline: none;
   font-size: 1rem;
   line-height: 1; }
+  input.invalid, input .error, select.invalid, select .error, textarea.invalid, textarea .error {
+    border-color: red; }
 
 button {
   cursor: pointer;
@@ -494,6 +498,9 @@ select::-ms-expand {
   padding: 10px 0; }
 
 /*-----------Catalog-----------*/
+.product-page {
+  padding: 0 0 40px; }
+
 /*-----------Product gallery-----------*/
 #product-gallery-additional {
   padding: 0 0 30px; }
@@ -511,9 +518,22 @@ select::-ms-expand {
     display: inline-block; }
 
 /*-----------Product gallery-----------*/
-.product-page {
-  padding: 0 0 40px; }
+/*-----------Product review-----------*/
+.product-review-title {
+  font-size: 1.5rem;
+  font-weight: 700; }
 
+.product-review-item {
+  position: relative;
+  margin: 20px 0;
+  padding: 0 0 0 50px;
+  min-height: 40px; }
+  .product-review-item figure {
+    position: absolute;
+    top: 0;
+    left: 0; }
+
+/*-----------Product review-----------*/
 /*-----------Page-----------*/
 .page-section header time {
   display: block;
@@ -556,6 +576,40 @@ select::-ms-expand {
   color: red; }
 
 /*-----------Profile-----------*/
+/*-----------Compare page-----------*/
+.compare-header,
+.compare-body,
+.compare-footer {
+  padding: 10px 0; }
+
+.compare-table {
+  text-align: center; }
+  .compare-table th {
+    vertical-align: middle;
+    min-width: 280px; }
+  .compare-table td {
+    vertical-align: middle;
+    padding: 10px 0; }
+
+.compare-item {
+  position: relative;
+  padding: 0 0 0 70px;
+  min-width: 280px;
+  min-height: 40px;
+  text-align: left; }
+
+.compare-item-image {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -30px; }
+  .compare-item-image img {
+    width: auto;
+    height: auto;
+    max-width: 60px;
+    max-height: 60px; }
+
+/*-----------Compare page-----------*/
 /*-----------Footer-----------*/
 .footer .seo {
   margin: 0; }

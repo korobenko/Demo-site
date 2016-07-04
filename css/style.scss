@@ -220,6 +220,8 @@ figure {
 .breadcrumbs-link {
     &.active {
         color: $active-color;
+        cursor: default;
+        text-decoration: none;
     }
 }
 /*---------Breadcrumbs---------*/
@@ -332,6 +334,9 @@ input, select, textarea {
   outline: none;
   font-size: 1rem;
   line-height: 1;
+  &.invalid, .error {
+      border-color: $active-color;
+  }
 }
 button {
   cursor: pointer;
@@ -572,6 +577,11 @@ select::-ms-expand{
 }
 /*-----------Catalog-----------*/
 
+
+.product-page {
+    padding: 0 0 40px;
+}
+
 /*-----------Product gallery-----------*/
 #product-gallery-additional {
     padding: 0 0 30px;
@@ -593,9 +603,29 @@ select::-ms-expand{
 }
 /*-----------Product gallery-----------*/
 
-.product-page {
-    padding: 0 0 40px;
+/*-----------Product review-----------*/
+.product-review {}
+.product-review-title {
+    font-size: 1.5rem;
+    @include font-bold();
 }
+.product-review-header {}
+.product-review-body {}
+.product-review-item {
+    position: relative;
+    margin: 20px 0;
+    padding: 0 0 0 50px;
+    min-height: 40px;
+    figure {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    article {}
+    footer {}
+}
+.review-item-content {}
+/*-----------Product review-----------*/
 
 /*-----------Page-----------*/
 .page-section {
@@ -659,6 +689,45 @@ select::-ms-expand{
     }
 }
 /*-----------Profile-----------*/
+
+/*-----------Compare page-----------*/
+.compare-page {}
+.compare-header,
+.compare-body,
+.compare-footer {
+    padding: 10px 0;
+}
+.compare-table {
+    text-align: center;
+    th {
+        vertical-align: middle;
+        min-width: 280px;
+    }
+    td {
+        vertical-align: middle;
+        padding: 10px 0;
+    }
+}
+.compare-item {
+    position: relative;
+    padding: 0 0 0 70px;
+    min-width: 280px;
+    min-height: 40px;
+    text-align: left;
+}
+.compare-item-image {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -30px;
+    img {
+        width: auto;
+        height: auto;
+        max-width: 60px;
+        max-height: 60px;
+    }
+}
+/*-----------Compare page-----------*/
 
 /*-----------Footer-----------*/
 .footer {

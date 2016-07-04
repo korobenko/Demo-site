@@ -43,18 +43,36 @@
             <div class="row-inline">
                 <div class="col-inline-5 middle">
                     <div class="header-top-menu">
-                        <ul class="header-top-menu-list">
-                            <li class="header-top-menu-child"><a href="javascript:;" class="header-top-menu-link">Пункт 1</a></li>
-                            <li class="header-top-menu-child"><a href="javascript:;" class="header-top-menu-link">Пункт 2</a></li>
-                            <li class="header-top-menu-child"><a href="javascript:;" class="header-top-menu-link">Пункт 3</a></li>
-                            <li class="header-top-menu-child"><a href="javascript:;" class="header-top-menu-link">Пункт 4</a></li>
+                        <ul class="header-top-menu-list" itemscope itemtype="http://schema.org/ItemList">
+                            <li class="header-top-menu-child" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList">
+                                <a itemprop="url" href="javascript:;" class="header-top-menu-link" title="Пункт 1">
+                                    <span itemprop="name">Пункт 1</span>
+                                </a>
+                            </li>
+                            <li class="header-top-menu-child" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList">
+                                <a itemprop="url" href="javascript:;" class="header-top-menu-link" title="Пункт 2">
+                                    <span itemprop="name">Пункт 2</span>
+                                </a>
+                            </li>
+                            <li class="header-top-menu-child" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList">
+                                <a itemprop="url" href="javascript:;" class="header-top-menu-link" title="Пункт 3">
+                                    <span itemprop="name">Пункт 3</span>
+                                </a>
+                            </li>
+                            <li class="header-top-menu-child" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList">
+                                <a itemprop="url" href="javascript:;" class="header-top-menu-link" title="Пункт 4">
+                                    <span itemprop="name">Пункт 4</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-inline-3 middle">
-                    <div class="header-search">
-                        <form>
-                            <input type="text" name="q" placeholder="Поиск...">
+                    <div class="header-search" itemscope itemtype="http://schema.org/WebSite">
+                        <meta itemprop="url" content="http://vis-front.vis-design.com/demo-site/"/>
+                        <form itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
+                            <meta itemprop="target" content="http://vis-front.vis-design.com/demo-site//search?q={search_text}"/>
+                            <input itemprop="query-input" name="search_text" type="text" name="q" placeholder="Поиск..." required>
                             <button type="submit" class="tranaparent-button"><i class="fa fa-search"></i></button>
                         </form>
                     </div>
@@ -86,29 +104,51 @@
         <div class="container">
             <div class="row-inline">
                 <div class="col-inline-1 middle">
-                    <figure class="header-logo">
-                        <a href="index-1.html"><img src="https://placehold.it/200" width="100" height="50" alt="damo-site" title="demo-site"></a>
+                    <figure class="header-logo" itemscope itemtype="http://schema.org/Organization">
+                        <meta itemprop="name" content="Demo-site">
+                        <meta itemprop="email" content="mail@mail.com">
+                        <meta itemprop="address" content="Киев, пр. Победы 67">
+                        <meta itemprop="telephone" content="+380933334400">
+                        <a itemprop="url" href="index-1.html">
+                            <img itemprop="logo" src="https://placehold.it/200" width="100" height="50" alt="damo-site" title="demo-site">
+                        </a>
                     </figure>
                 </div>
                 <div class="col-inline-8 middle">
-                    <nav class="header-bottom-menu">
-                        <ul class="header-bottom-menu-list">
-                            <li class="header-bottom-menu-child"><a href="javascript:;" class="header-bottom-menu-link">Пункт 1</a></li>
-                            <li class="header-bottom-menu-child"><a href="javascript:;" class="header-bottom-menu-link">Пункт 2</a></li>
-                            <li class="header-bottom-menu-child"><a href="javascript:;" class="header-bottom-menu-link">Пункт 3</a></li>
-                            <li class="header-bottom-menu-child"><a href="javascript:;" class="header-bottom-menu-link">Пункт 4</a></li>
-                            <li class="header-bottom-menu-child"><a href="javascript:;" class="header-bottom-menu-link">Пункт 5</a></li>
+                    <nav class="header-bottom-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                        <ul class="header-bottom-menu-list" itemprop="about" itemscope itemtype="http://schema.org/ItemList">
+                            <li class="header-bottom-menu-child" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList">
+                                <a itemprop="url" href="javascript:;" class="header-bottom-menu-link" title="Пункт 1">
+                                    <span itemprop="name">Пункт 1</span>
+                                </a>
+                            </li>
+                            <li class="header-bottom-menu-child" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList">
+                                <a itemprop="url" href="javascript:;" class="header-bottom-menu-link" title="Пункт 2">
+                                    <span itemprop="name">Пункт 2</span>
+                                </a>
+                            </li>
+                            <li class="header-bottom-menu-child" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList">
+                                <a itemprop="url" href="javascript:;" class="header-bottom-menu-link" title="Пункт 3">
+                                    <span itemprop="name">Пункт 3</span>
+                                </a>
+                            </li>
+                            <li class="header-bottom-menu-child" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList">
+                                <a itemprop="url" href="javascript:;" class="header-bottom-menu-link" title="Пункт 4">
+                                    <span itemprop="name">Пункт 4</span>
+                                </a>
+                            </li>
+                            <li class="header-bottom-menu-child" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList">
+                                <a itemprop="url" href="javascript:;" class="header-bottom-menu-link" title="Пункт 5">
+                                    <span itemprop="name">Пункт 5</span>
+                                </a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
                 <div class="col-inline-3 middle">
-                    <div class="header-contact" itemscope itemtype="http://schema.org/Organization">
-                        <span style="display: none" itemprop="name">Общество с ограниченной ответственностью Demo-site</span>
-                        <div style="display: none" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
-                            Юридический адрес: 119049, г. Киев
-                        </div>
+                    <div class="header-contact">
                         <p><a href="mailto:mail@mail.com">mail@mail.com</a></p>
-                        <p><a href="tel:(093) 333-44-00"><span itemprop="telephone">(093) 333-44-00</span></a></p>
+                        <p><a href="tel:(093) 333-44-00">(093) 333-44-00</span></p>
                     </div>
                     <div class="header-callback">
                         <div id="callback" class="dropdown">
@@ -821,7 +861,7 @@
                 <button type="button" data-popup-close class="popup-close"><i class="fa fa-times"></i></button>
             </div>
             <div class="popup-body">
-                <form>
+                <form name="login-form">
                     <div class="form-row">
                         <input type="email" name="email" placeholder="Email">
                     </div>
@@ -866,7 +906,7 @@
                 <button type="button" data-popup-close class="popup-close"><i class="fa fa-times"></i></button>
             </div>
             <div class="popup-body">
-                <form>
+                <form name="registration-form">
                     <div class="form-row">
                         <input type="email" name="email" placeholder="Email">
                     </div>
@@ -880,7 +920,7 @@
                         <input type="password" name="password" placeholder="Пароль">
                     </div>
                     <div class="form-row">
-                        <input type="password" name="password-2" placeholder="Повторите пароль">
+                        <input type="password" name="password_2" placeholder="Повторите пароль">
                     </div>
                     <div class="form-row">
                         <button type="submit" class="submit-button">Зарегистрироваться</button>
@@ -914,7 +954,7 @@
                 <button type="button" data-popup-close class="popup-close"><i class="fa fa-times"></i></button>
             </div>
             <div class="popup-body">
-                <form>
+                <form name="password-form">
                     <div class="form-row">
                         <input type="email" name="email" placeholder="Email">
                     </div>

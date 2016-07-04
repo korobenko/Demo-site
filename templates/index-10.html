@@ -6,23 +6,12 @@
 
 <!--main!-->
 <main>
-    <!--breadcrumbs!-->
-    <section class="breadcrumbs">
-        <div class="container">
-            <ul class="breadcrumbs-list">
-                <li class="breadcrumbs-child">
-                    <a href="javascript:;" class="breadcrumbs-link">Главная</a>
-                </li>
-                <li class="breadcrumbs-child">
-                    <span> > </span>
-                </li>
-                <li class="breadcrumbs-child">
-                    <span class="breadcrumbs-link active">Личный кабинет</span>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <!--breadcrumbs!-->
+    @@include('templates/partilas/breadcrumbs.html', {
+        "links" : {
+            "main" : "Главная",
+            "current" : "Личный кабинет"
+        }
+    })
 
     <!--profile-page!-->
     <section class="section profile-page">
@@ -32,21 +21,27 @@
                 <div class="row">
                     <div class="col-xs-3 profile-sidebar">
                         <div class="profile-menu">
-                            <ul class="profile-menu-list">
-                                <li class="profile-menu-child">
-                                    <a href="javascript:;" class="profile-menu-link active">Персональные данные</a>
+                            <ul class="profile-menu-list" itemscope itemtype="http://schema.org/ItemList">
+                                <li class="profile-menu-child" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList">
+                                    <a itemprop="url" href="javascript:;" class="profile-menu-link active" title="Персональные данные">
+                                        <span itemprop="name">Персональные данные</span>
+                                    </a>
                                 </li>
-                                <li class="profile-menu-child">
-                                    <a href="javascript:;" class="profile-menu-link">Избранное</a>
+                                <li class="profile-menu-child" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList">
+                                    <a itemprop="url" href="javascript:;" class="profile-menu-link" title="Избранное">
+                                        <span itemprop="name">Избранное</span>
+                                    </a>
                                 </li>
-                                <li class="profile-menu-child">
-                                    <a href="javascript:;" class="profile-menu-link">История покупок</a>
+                                <li class="profile-menu-child" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList">
+                                    <a itemprop="url" href="javascript:;" class="profile-menu-link" title="История покупок">
+                                        <span itemprop="name">История покупок</span>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-xs-9 profile-content">
-                        <form>
+                        <form name="profile-form">
                             <div class="form-row">
                                 <input type="email" name="email" placeholder="Email">
                             </div>
@@ -66,15 +61,15 @@
                                 <button type="submit" class="submit-button">Сохранить</button>
                             </div>
                         </form>
-                        <form>
+                        <form name="profile-password-form">
                             <div class="form-row">
-                                <input type="password" name="old-password" placeholder="Старый пароль">
+                                <input type="password" name="old_password" placeholder="Старый пароль">
                             </div>
                             <div class="form-row">
-                                <input type="password" name="new-password" placeholder="Новый пароль">
+                                <input type="password" name="new_password" placeholder="Новый пароль">
                             </div>
                             <div class="form-row">
-                                <input type="password" name="retry-password" placeholder="Повторите пароль">
+                                <input type="password" name="retry_password" placeholder="Повторите пароль">
                             </div>
                             <div class="form-row">
                                 <button type="submit" class="submit-button">Сохранить</button>

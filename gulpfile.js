@@ -13,6 +13,7 @@ var css = [
     'css/grid.css',
     'css/jq-rating.css',
     'css/slick.css',
+    'css/toastr.css',
     'css/dropdown.css',
     'css/popup.css',
     'css/tabs.css',
@@ -22,8 +23,10 @@ var css = [
 
 var js = [
     'js/jquery.js',
+    'js/jquery.validete.min.js',
     'js/jq-rating.min.js',
     'js/slick.js',
+    'js/toastr.min.js',
     'js/jquery.maskedinput.js',
     'js/header.js',
     'js/dropdown.js',

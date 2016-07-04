@@ -16,6 +16,6 @@
 .tabs li:last-child {
     margin-right: 0;
 }
-.tabs li.active a {
+.tabs li.active .button {
     color: red;
 }

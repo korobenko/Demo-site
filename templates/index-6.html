@@ -6,32 +6,15 @@
 
 <!--main!-->
 <main>
-    <!--breadcrumbs!-->
-    <section class="breadcrumbs">
-        <div class="container">
-            <ul class="breadcrumbs-list">
-                <li class="breadcrumbs-child">
-                    <a href="javascript:;" class="breadcrumbs-link">Главная</a>
-                </li>
-                <li class="breadcrumbs-child">
-                    <span> > </span>
-                </li>
-                <li class="breadcrumbs-child">
-                    <a class="breadcrumbs-link active">Каталог товаров</a>
-                </li>
-                <li class="breadcrumbs-child">
-                    <span> > </span>
-                </li>
-                <li class="breadcrumbs-child">
-                    <span class="breadcrumbs-link active">Название тестового товара 1</span>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <!--breadcrumbs!-->
+    @@include('templates/partilas/breadcrumbs.html', {
+        "links" : {
+            "main" : "Главная",
+            "current" : "Название тестового товара 1"
+        }
+    })
 
     <!--product-page!-->
-    <section class="section product-page">
+    <section class="section product-page" itemscope itemtype="http://schema.org/Product">
         <div class="container">
             <!--section!-->
             <section class="section">
@@ -65,7 +48,7 @@
                             <div class="message"></div>
                         </div>
                         <button type="button" class="button">Купить</button>
-                        <button type="button" class="button" data-popup data-target="#buy-one-click">Купить в 1 клик</button>
+                        <button type="button" class="button" data-popup data-target="#buy-one-click-popup">Купить в 1 клик</button>
                         <button type="button" class="button">Добавить в сравнение</button>
                         <button type="button" class="button">Добавить в избранное</button>
                         <div>10 комментариев</div>
@@ -77,13 +60,13 @@
             <section class="section">
                 <div id="product-tabs" class="tabs">
                     <ul>
-                        <li class="active"><a data-id="product-tab-all, product-tab-description, product-tab-haracteristics" href="javascript:;">Все</a></li>
-                        <li><a data-id="product-tab-description" href="javascript:;">Описание</a></li>
-                        <li><a data-id="product-tab-haracteristics" href="javascript:;">Характеристики</a></li>
+                        <li data-tab class="active"><button type="button" data-tab-button data-id="product-tab-all, product-tab-description, product-tab-haracteristics" class="button">Все</button></li>
+                        <li data-tab><button type="button" data-tab-button data-id="product-tab-description" class="button">Описание</button></li>
+                        <li data-tab><button type="button" data-tab-button data-id="product-tab-haracteristics" class="button">Характеристики</button></li>
                     </ul>
                 </div>
                 <div data-parent-id="product-tabs" id="product-tab-description" class="tab-container active">
-                    <article class="article">
+                    <article class="article" itemprop="description">
                         <h2>Описание</h2>
                         <p>Деловые переговоры и многочасовые встречи с партнерами, офисные совещания и длительное изучение документов – все эти служебные обязанности можно с лёгкостью пережить, комфортно устроившись в кресле Атлант. Это стильное и солидное кресло, которое идеально подходит для руководителя компании или управляющего фирмы. Оно по всем своим характеристикам соответствует основным требованиям, предъявляемым к креслу руководителя среднего звена. Атлант имеет высокую спинку, глубокую и широкую посадку, отлично подойдет для людей высокого и среднего роста. Эргономичные изгибы сидения и спинки в </p>
                     </article>
@@ -98,6 +81,7 @@
                 </div>
             </section>
             <!--section!-->
+            @@include('templates/partilas/product-review.html')
             <!--section!-->
             <section class="section">
                 <div class="container">
@@ -133,8 +117,8 @@
 
 @@include('templates/partilas/popups.html')
 
-<!--password!-->
-<div id="buy-one-click" class="popup-container">
+<!--buy-one-click!-->
+<div id="buy-one-click-popup" class="popup-container">
     <div class="popup">
         <div class="popup-content">
             <div class="popup-header">
@@ -142,7 +126,7 @@
                 <button type="button" data-popup-close class="popup-close"><i class="fa fa-times"></i></button>
             </div>
             <div class="popup-body">
-                <form>
+                <form name="buy-one-click-form">
                     <div class="form-row">
                         <input type="tel" name="tel">
                     </div>
