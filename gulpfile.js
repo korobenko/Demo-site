@@ -23,6 +23,7 @@ var css = [
 
 var js = [
     'js/jquery.js',
+    'js/jquery-ui.1.11.4.js',
     'js/jquery.validete.min.js',
     'js/jq-rating.min.js',
     'js/slick.js',
@@ -37,6 +38,7 @@ var js = [
     'js/sliders.js',
     'js/rating.js',
     'js/product-gallery.js',
+    'js/catalog.js',
     'js/script.js'
 ];
 
@@ -78,10 +80,10 @@ gulp.task('scripts', function () {
 gulp.task('watch', function () {
     gulp.watch('templates/*.html', ['html']);
     gulp.watch('templates/*/*.html', ['html']);
-    //gulp.watch('css/*.scss', ['sass']);
+    gulp.watch('css/*.scss', ['sass']);
     gulp.watch(css, ['styles']);
     gulp.watch(js, ['scripts']);
 });
 
-//gulp.task('default', ['html', 'sass', 'styles', 'scripts', 'watch']);
-gulp.task('default', ['html', 'styles', 'scripts', 'watch']);
+gulp.task('default', ['html', 'sass', 'styles', 'scripts', 'watch']);
+//gulp.task('default', ['html', 'styles', 'scripts', 'watch']);

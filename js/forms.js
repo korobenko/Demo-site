@@ -1,5 +1,20 @@
 'use strict';
 
+jQuery.validator.addMethod("onlyLetters",
+    function(value, element, regexp) {
+    	var re = new RegExp(/\d+/);
+    	return !(re.test(value));
+    },
+    "Please enter a valid value."
+);
+jQuery.validator.addMethod("birthday",
+    function(value, element, regexp) {
+    	var re = new RegExp(/^[\d]{2}(\.|-|\/)[\d]{2}\1[\d]{4}$/i);
+    	return re.test(value);
+    },
+    "Please enter a valid value."
+);
+
 var Auth = {
 	init : function () {
 		this.login();
@@ -54,10 +69,12 @@ var Auth = {
 					email : true
 				},
                 name : {
-					required : true
+					required : true,
+					onlyLetters : true
 				},
                 surname : {
-					required : true
+					required : true,
+					onlyLetters : true
 				},
 				password : {
 					required : true,
@@ -76,10 +93,12 @@ var Auth = {
 					email : ''
 				},
                 name : {
-					required : ''
+					required : '',
+					onlyLetters : ''
 				},
                 surname : {
-					required : ''
+					required : '',
+					onlyLetters : ''
 				},
 				password : {
 					required : '',
@@ -165,7 +184,8 @@ var Feedback = {
 		jQuery("[name=feedback-form]").validate({
 			rules : {
 				name : {
-					required : true
+					required : true,
+					onlyLetters : true
 				},
                 tel : {
 					required : true
@@ -173,7 +193,8 @@ var Feedback = {
 			},
 			messages : {
                 name : {
-					required : ''
+					required : '',
+					onlyLetters : ''
 				},
                 tel : {
 					required : ''
@@ -267,7 +288,8 @@ var ProductReview = {
                     email : true
 				},
                 name : {
-					required : true
+					required : true,
+					onlyLetters : true
 				},
                 text : {
 					required : true
@@ -279,7 +301,8 @@ var ProductReview = {
                     email : ''
 				},
                 name : {
-					required : ''
+					required : '',
+					onlyLetters : ''
 				},
                 text : {
 					required : ''
@@ -311,7 +334,8 @@ var Checkout = {
 		jQuery("[name=checkout-form]").validate({
 			rules : {
                 name : {
-					required : true
+					required : true,
+					onlyLetters : true
 				},
                 city : {
 					required : true
@@ -326,7 +350,8 @@ var Checkout = {
 			},
 			messages : {
                 name : {
-					required : ''
+					required : '',
+					onlyLetters : true
 				},
                 city : {
 					required : ''
@@ -375,10 +400,12 @@ var Profile = {
 					email : true
 				},
                 name : {
-					required : true
+					required : true,
+					onlyLetters : true
 				},
                 surname : {
-					required : true
+					required : true,
+					onlyLetters : true
 				},
 				password : {
 					required : true,
@@ -397,10 +424,12 @@ var Profile = {
 					email : ''
 				},
                 name : {
-					required : ''
+					required : '',
+					onlyLetters : ''
 				},
                 surname : {
-					required : ''
+					required : '',
+					onlyLetters : ''
 				},
 				password : {
 					required : '',
