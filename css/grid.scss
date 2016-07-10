@@ -34,7 +34,7 @@ $screen-min-lg: 1200px;
   }
 }
 
-@mixin responsive($breakpoint,$prefix) {
+@mixin responsive-float($breakpoint,$prefix) {
   @media (min-width: $breakpoint) {
     @include col-float($prefix);
   }
@@ -55,6 +55,12 @@ $screen-min-lg: 1200px;
   }
 }
 
+@mixin responsive-inline($breakpoint,$prefix) {
+  @media (min-width: $breakpoint) {
+    @include col-inline($prefix);
+  }
+}
+
 @mixin col-cell($prefix) {
   @for $i from 1 to $grid-columns+1 {
     .col-#{$prefix}-#{$i} {
@@ -67,10 +73,31 @@ $screen-min-lg: 1200px;
   }
 }
 
-@mixin col-position($prefix, $position) {
+@mixin col-position($prefix-0,$prefix-1,$prefix-2,$prefix-3,$prefix-4,$prefix-5,$position-1,$position-2,$position-3) {
   @for $i from 1 to $grid-columns+1 {
-    .col-#{$prefix}-#{$i}.#{$position} {
-      vertical-align: $position;
+    .col-#{$prefix-0}-#{$i}.#{$position-1},
+    .col-#{$prefix-1}-#{$i}.#{$position-1},
+    .col-#{$prefix-2}-#{$i}.#{$position-1},
+    .col-#{$prefix-3}-#{$i}.#{$position-1},
+    .col-#{$prefix-4}-#{$i}.#{$position-1},
+    .col-#{$prefix-5}-#{$i}.#{$position-1} {
+      vertical-align: $position-1;
+    }
+    .col-#{$prefix-0}-#{$i}.#{$position-2},
+    .col-#{$prefix-1}-#{$i}.#{$position-2},
+    .col-#{$prefix-2}-#{$i}.#{$position-2},
+    .col-#{$prefix-3}-#{$i}.#{$position-2},
+    .col-#{$prefix-4}-#{$i}.#{$position-2},
+    .col-#{$prefix-5}-#{$i}.#{$position-2} {
+      vertical-align: $position-2;
+    }
+    .col-#{$prefix-0}-#{$i}.#{$position-3},
+    .col-#{$prefix-1}-#{$i}.#{$position-3},
+    .col-#{$prefix-2}-#{$i}.#{$position-3},
+    .col-#{$prefix-3}-#{$i}.#{$position-3},
+    .col-#{$prefix-4}-#{$i}.#{$position-3},
+    .col-#{$prefix-5}-#{$i}.#{$position-3} {
+      vertical-align: $position-3;
     }
   }
 }
@@ -94,9 +121,10 @@ $screen-min-lg: 1200px;
     @include clearfix();
 }
 @include col-inline(inline);
-@include col-position(inline, top);
-@include col-position(inline, middle);
-@include col-position(inline, bottom);
+@include col-inline(inline-xs);
+@include responsive-inline($screen-min-sm, inline-sm);
+@include responsive-inline($screen-min-md, inline-md);
+@include responsive-inline($screen-min-lg, inline-lg);
 
 /*-------table col!--------*/
 .row-table {
@@ -105,9 +133,10 @@ $screen-min-lg: 1200px;
     width: 100%;
 }
 @include col-cell(cell);
-@include col-position(cell, top);
-@include col-position(cell, middle);
-@include col-position(cell, bottom);
+
+/*--------position---------*/
+@include col-position(inline,inline-xs,inline-sm,inline-md,inline-lg,cell,top,middle,bottom);
+
 
 /*-------float col!--------*/
 .row {
@@ -117,6 +146,6 @@ $screen-min-lg: 1200px;
     @include clearfix();
 }
 @include col-float(xs);
-@include responsive($screen-min-sm, sm);
-@include responsive($screen-min-md, md);
-@include responsive($screen-min-lg, lg);
+@include responsive-float($screen-min-sm, sm);
+@include responsive-float($screen-min-md, md);
+@include responsive-float($screen-min-lg, lg);
