@@ -13,68 +13,13 @@
 }
 
 //----- Grid System
-$grid-columns: 12;
 $grid-spacing: 30px;
-
 $screen-min-sm: 768px;
 $screen-min-md: 992px;
 $screen-min-lg: 1200px;
 
-@mixin col-float($prefix) {
-  @for $i from 1 to $grid-columns+1 {
-    .col-#{$prefix}-#{$i} {
-        position: relative;
-        float:left;
-        width: percentage(($i / $grid-columns));
-        min-height: 1px;
-        padding-left: $grid-spacing/2;
-        padding-right: $grid-spacing/2;
-        @include border-box();
-    }
-  }
-}
-
-@mixin responsive-float($breakpoint,$prefix) {
-  @media (min-width: $breakpoint) {
-    @include col-float($prefix);
-  }
-}
-
-@mixin col-inline($prefix) {
-  @for $i from 1 to $grid-columns+1 {
-    .col-#{$prefix}-#{$i} {
-        position: relative;
-        display: inline-block;
-        width: percentage(($i / $grid-columns));
-        min-height: 1px;
-        padding-left: $grid-spacing/2;
-        padding-right: $grid-spacing/2;
-        font-size: 0.875rem;
-        @include border-box();
-    }
-  }
-}
-
-@mixin responsive-inline($breakpoint,$prefix) {
-  @media (min-width: $breakpoint) {
-    @include col-inline($prefix);
-  }
-}
-
-@mixin col-cell($prefix) {
-  @for $i from 1 to $grid-columns+1 {
-    .col-#{$prefix}-#{$i} {
-        position: relative;
-        display: table-cell;;
-        width: percentage(($i / $grid-columns));
-        padding-left: $grid-spacing/2;
-        padding-right: $grid-spacing/2;
-    }
-  }
-}
-
 @mixin col-position($prefix-0,$prefix-1,$prefix-2,$prefix-3,$prefix-4,$prefix-5,$position-1,$position-2,$position-3) {
-  @for $i from 1 to $grid-columns+1 {
+  @for $i from 1 to 12+1 {
     .col-#{$prefix-0}-#{$i}.#{$position-1},
     .col-#{$prefix-1}-#{$i}.#{$position-1},
     .col-#{$prefix-2}-#{$i}.#{$position-1},
@@ -99,6 +44,98 @@ $screen-min-lg: 1200px;
     .col-#{$prefix-5}-#{$i}.#{$position-3} {
       vertical-align: $position-3;
     }
+  }
+}
+
+@mixin col-inline($prefix) {
+    .col-#{$prefix}-1,
+    .col-#{$prefix}-2,
+    .col-#{$prefix}-3,
+    .col-#{$prefix}-4,
+    .col-#{$prefix}-5,
+    .col-#{$prefix}-6,
+    .col-#{$prefix}-7,
+    .col-#{$prefix}-8,
+    .col-#{$prefix}-9,
+    .col-#{$prefix}-10,
+    .col-#{$prefix}-11,
+    .col-#{$prefix}-12 {
+        position: relative;
+        display: inline-block;
+        min-height: 1px;
+        padding-left: $grid-spacing/2;
+        padding-right: $grid-spacing/2;
+        font-size: 0.875rem;
+        @include border-box();
+    }
+    @for $i from 1 to 12+1 {
+        .col-#{$prefix}-#{$i} {
+            width: percentage(($i / 12));
+        }
+    }
+}
+
+@mixin responsive-inline($breakpoint,$prefix) {
+  @media (min-width: $breakpoint) {
+    @include col-inline($prefix);
+  }
+}
+
+@mixin col-cell($prefix) {
+    .col-#{$prefix}-1,
+    .col-#{$prefix}-2,
+    .col-#{$prefix}-3,
+    .col-#{$prefix}-4,
+    .col-#{$prefix}-5,
+    .col-#{$prefix}-6,
+    .col-#{$prefix}-7,
+    .col-#{$prefix}-8,
+    .col-#{$prefix}-9,
+    .col-#{$prefix}-10,
+    .col-#{$prefix}-11,
+    .col-#{$prefix}-12, {
+        position: relative;
+        display: table-cell;;
+        padding-left: $grid-spacing/2;
+        padding-right: $grid-spacing/2;
+    }
+    @for $i from 1 to 12+1 {
+        .col-#{$prefix}-#{$i} {
+            width: percentage(($i / 12));
+        }
+    }
+}
+
+@mixin col-float($prefix) {
+    .col-#{$prefix}-1,
+    .col-#{$prefix}-2,
+    .col-#{$prefix}-3,
+    .col-#{$prefix}-4,
+    .col-#{$prefix}-5,
+    .col-#{$prefix}-6,
+    .col-#{$prefix}-7,
+    .col-#{$prefix}-8,
+    .col-#{$prefix}-9,
+    .col-#{$prefix}-10,
+    .col-#{$prefix}-11,
+    .col-#{$prefix}-12 {
+        position: relative;
+        float:left;
+        min-height: 1px;
+        padding-left: $grid-spacing/2;
+        padding-right: $grid-spacing/2;
+        @include border-box();
+    }
+    @for $i from 1 to 12+1 {
+        .col-#{$prefix}-#{$i} {
+            width: percentage(($i / 12));
+        }
+    }
+}
+
+@mixin responsive-float($breakpoint,$prefix) {
+  @media (min-width: $breakpoint) {
+    @include col-float($prefix);
   }
 }
 
@@ -136,7 +173,6 @@ $screen-min-lg: 1200px;
 
 /*--------position---------*/
 @include col-position(inline,inline-xs,inline-sm,inline-md,inline-lg,cell,top,middle,bottom);
-
 
 /*-------float col!--------*/
 .row {
