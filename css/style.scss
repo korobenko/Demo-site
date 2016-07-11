@@ -65,6 +65,9 @@ body {
     -ms-flex: none;
     flex: none;
 }
+.container {
+    min-width: 1000px;
+}
 main {
     -webkit-box-flex: 1;
     -webkit-flex: 1 0 auto;
@@ -750,6 +753,19 @@ select::-ms-expand{
     &:last-child {
         margin-right: 0;
     }
+}
+.compare-fixed-label {
+    position: fixed;
+    padding: 5px 20px;
+    bottom: 0;
+    right: 0;
+    color: #fff;
+    background: black;
+    z-index: 1;
+}
+.compare-fixed-label a {
+    color: #fff;
+    text-decoration: none;
 }
 /*-----------Footer-----------*/
 
