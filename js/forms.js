@@ -2,7 +2,7 @@
 
 jQuery.fn.reset = function () {
     this[0].reset();
-    return this
+    return this;
 };
 
 jQuery.validator.addMethod("onlyLetters",
