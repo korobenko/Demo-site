@@ -14,13 +14,23 @@ var Rating = {
         data['value'] = value;
         console.log(data);
 
-        jQuery.post("/", {data: data}, function (response) {
-            if (response.status == "error") {
-                _this.find('.message').html(response.error_messages);
-            } else {
-                _this.find('.message').html(response.ok_messages);
+        /*jQuery.ajax({
+            type: "POST",
+            url: '/rating',
+            cache: false,
+            data: data,
+            dataType: 'json',
+            success: function(response) {
+                if (response.status) {
+                    _this.find('.message').html(response.ok_messages);
+                } else {
+                    _this.find('.message').html(response.error_messages);
+                }
+            },
+            error: function () {
+
             }
-        }, "json");
+        });*/
     },
 
     events: function () {

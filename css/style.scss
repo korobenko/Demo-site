@@ -329,7 +329,6 @@ figure {
         }
     }
 }
-label {}
 input, select, textarea {
   width: 100%;
   padding: 10px;
@@ -340,10 +339,16 @@ input, select, textarea {
   &.invalid, .error {
       border-color: $active-color;
   }
+  &[disabled], &[disabled="disabled"] {
+      opacity: 0.5;
+  }
 }
 button {
   cursor: pointer;
   cursor: pointer;
+  &[disabled], &[disabled="disabled"] {
+      opacity: 0.5;
+  }
 }
 textarea {
   resize: none;
@@ -449,19 +454,6 @@ select::-ms-expand{
         color: $active-color;
     }
 }
-.header-search {
-    position: relative;
-    input[type="text"] {
-        padding-right: 30px;
-    }
-    button {
-        position: absolute;
-        top: 50%;
-        right: 10px;
-        margin-top: -7px;
-        z-index: 1;
-    }
-}
 .header-bottom {
     padding: 10px;
     background: #eeeeee;
@@ -482,6 +474,48 @@ select::-ms-expand{
     }
 }
 /*-----------Header-----------*/
+
+/*-----------Search-----------*/
+.header-search {
+    position: relative;
+    input[type="text"] {
+        padding-right: 30px;
+    }
+    button {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        margin-top: -7px;
+        z-index: 1;
+    }
+}
+.live-search {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+.live-search-container {
+    padding: 5px;
+    border: 1px solid $border-color;
+    background: #fff;
+}
+.search-item {
+    position: relative;
+    padding: 5px 0;
+    .row-inline {
+        margin: 0 -5px;
+    }
+    [class^="col-inline-"] {
+        padding: 0 5px;
+    }
+    &:hover, &.selected {
+        outline: 1px solid red;
+    }
+}
+/*-----------Search-----------*/
 
 /*-----------Main-----------*/
 #main-slider {

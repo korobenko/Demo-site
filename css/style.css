@@ -277,10 +277,14 @@ input, select, textarea {
   line-height: 1; }
   input.invalid, input .error, select.invalid, select .error, textarea.invalid, textarea .error {
     border-color: red; }
+  input[disabled], input[disabled="disabled"], select[disabled], select[disabled="disabled"], textarea[disabled], textarea[disabled="disabled"] {
+    opacity: 0.5; }
 
 button {
   cursor: pointer;
   cursor: pointer; }
+  button[disabled], button[disabled="disabled"] {
+    opacity: 0.5; }
 
 textarea {
   resize: none;
@@ -389,17 +393,6 @@ select::-ms-expand {
 .header-lang a.active {
   color: red; }
 
-.header-search {
-  position: relative; }
-  .header-search input[type="text"] {
-    padding-right: 30px; }
-  .header-search button {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    margin-top: -7px;
-    z-index: 1; }
-
 .header-bottom {
   padding: 10px;
   background: #eeeeee; }
@@ -416,6 +409,42 @@ select::-ms-expand {
   width: 200px; }
 
 /*-----------Header-----------*/
+/*-----------Search-----------*/
+.header-search {
+  position: relative; }
+  .header-search input[type="text"] {
+    padding-right: 30px; }
+  .header-search button {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -7px;
+    z-index: 1; }
+
+.live-search {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 1; }
+
+.live-search-container {
+  padding: 5px;
+  border: 1px solid #dedede;
+  background: #fff; }
+
+.search-item {
+  position: relative;
+  padding: 5px 0; }
+  .search-item .row-inline {
+    margin: 0 -5px; }
+  .search-item [class^="col-inline-"] {
+    padding: 0 5px; }
+  .search-item:hover, .search-item.selected {
+    outline: 1px solid red; }
+
+/*-----------Search-----------*/
 /*-----------Main-----------*/
 #main-slider {
   max-height: 290px;
@@ -648,5 +677,3 @@ select::-ms-expand {
 /*-----------Footer-----------*/
 /*-----------Media-----------*/
 /*-----------Media-----------*/
-
-/*# sourceMappingURL=style.css.map */

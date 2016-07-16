@@ -41,7 +41,7 @@
     <div class="header-top">
         <div class="container">
             <div class="row-inline">
-                <div class="col-inline-5 middle">
+                <div class="col-inline-xs-5 middle">
                     <div class="header-top-menu">
                         <ul class="header-top-menu-list" itemscope itemtype="http://schema.org/ItemList">
                             <li class="header-top-menu-child" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList">
@@ -67,15 +67,55 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-inline-3 middle">
+                <div class="col-inline-xs-3 middle">
+                    <!--header-search!-->
                     <div class="header-search">
                         <form>
-                            <input type="text" name="q" placeholder="Поиск...">
+                            <input type="text" name="q" placeholder="Поиск..." autocomplete="off">
                             <button type="submit" class="tranaparent-button"><i class="fa fa-search"></i></button>
                         </form>
+                        <div class="live-search">
+                            <div class="live-search-container">
+                                <div class="search-item">
+                                    <div class="row-inline">
+                                        <div class="col-inline-xs-3 middle">
+                                            <figure>
+                                                <a href="http://www.vis-design.com/">
+                                                    <img src="https://placeholdit.imgix.net/~text?txtsize=75&txt=50%C3%9750&w=50&h=50" width="50" height="50" alt="item" title="item">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="col-inline-xs-9 middle">
+                                            <div class="search-item-title">
+                                                <a href="http://www.vis-design.com/">Название товара 1</a>
+                                            </div>
+                                            <div class="search-item-price">$390.00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="search-item">
+                                    <div class="row-inline">
+                                        <div class="col-inline-xs-3 middle">
+                                            <figure>
+                                                <a href="http://www.vizitka.ua/">
+                                                    <img src="https://placeholdit.imgix.net/~text?txtsize=75&txt=50%C3%9750&w=50&h=50" width="50" height="50" alt="item" title="item">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="col-inline-xs-9 middle">
+                                            <div class="search-item-title">
+                                                <a href="http://www.vizitka.ua/">Название товара 2</a>
+                                            </div>
+                                            <div class="search-item-price">$390.00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <!--header-search!-->
                 </div>
-                <div class="col-inline-3 middle">
+                <div class="col-inline-xs-3 middle">
                     <div class="header-login">
                         <ul>
                             <li><button type="button" class="tranaparent-button" data-popup data-target="#login-popup">Вход</button></li>
@@ -84,7 +124,7 @@
                     </div>
                     <!--<div class="header-logined"></div>!-->
                 </div>
-                <div class="col-inline-1 middle">
+                <div class="col-inline-xs-1 middle">
                     <div class="header-lang">
                         <ul>
                             <li><a href="javascript:;">Eng</a></li>
@@ -101,7 +141,7 @@
     <div class="header-bottom">
         <div class="container">
             <div class="row-inline">
-                <div class="col-inline-1 middle">
+                <div class="col-inline-xs-1 middle">
                     <figure class="header-logo" itemscope itemtype="http://schema.org/Organization">
                         <meta itemprop="name" content="Demo-site">
                         <meta itemprop="email" content="mail@mail.com">
@@ -112,7 +152,7 @@
                         </a>
                     </figure>
                 </div>
-                <div class="col-inline-8 middle">
+                <div class="col-inline-xs-8 middle">
                     <nav class="header-bottom-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
                         <ul class="header-bottom-menu-list" itemprop="about" itemscope itemtype="http://schema.org/ItemList">
                             <li class="header-bottom-menu-child" itemprop="itemListElement" itemscope itemtype="http://schema.org/ItemList">
@@ -143,7 +183,7 @@
                         </ul>
                     </nav>
                 </div>
-                <div class="col-inline-3 middle">
+                <div class="col-inline-xs-3 middle">
                     <div class="header-contact">
                         <p><a href="mailto:mail@mail.com">mail@mail.com</a></p>
                         <p><a href="tel:(093) 333-44-00">(093) 333-44-00</a></p>
@@ -152,7 +192,7 @@
                         <div id="callback" class="dropdown">
                             <button type="button" class="dropdown-button" data-dropdown>Перезвоните мне</button>
                             <div class="dropdown-menu">
-                                <form>
+                                <form name="callback-form">
                                     <div class="form-row">
                                         <input type="text" name="name" placeholder="Имя">
                                     </div>
@@ -241,10 +281,10 @@
         <div class="product-item-title"><a href="javascript:;">Название товара 1</a></div>
         <div class="product-item-price">
             <div class="row-inline">
-                <div class="col-inline-6 middle">
+                <div class="col-inline-xs-6 middle">
                     <div class="old-price">$490.00</div>
                 </div>
-                <div class="col-inline-6 middle">
+                <div class="col-inline-xs-6 middle">
                     <div class="price">$390.00</div>
                 </div>
             </div>
@@ -281,10 +321,10 @@
         <div class="product-item-title"><a href="javascript:;">Название товара 1</a></div>
         <div class="product-item-price">
             <div class="row-inline">
-                <div class="col-inline-6 middle">
+                <div class="col-inline-xs-6 middle">
                     <div class="old-price">$490.00</div>
                 </div>
-                <div class="col-inline-6 middle">
+                <div class="col-inline-xs-6 middle">
                     <div class="price">$390.00</div>
                 </div>
             </div>
@@ -321,10 +361,10 @@
         <div class="product-item-title"><a href="javascript:;">Название товара 1</a></div>
         <div class="product-item-price">
             <div class="row-inline">
-                <div class="col-inline-6 middle">
+                <div class="col-inline-xs-6 middle">
                     <div class="old-price">$490.00</div>
                 </div>
-                <div class="col-inline-6 middle">
+                <div class="col-inline-xs-6 middle">
                     <div class="price">$390.00</div>
                 </div>
             </div>
@@ -361,10 +401,10 @@
         <div class="product-item-title"><a href="javascript:;">Название товара 1</a></div>
         <div class="product-item-price">
             <div class="row-inline">
-                <div class="col-inline-6 middle">
+                <div class="col-inline-xs-6 middle">
                     <div class="old-price">$490.00</div>
                 </div>
-                <div class="col-inline-6 middle">
+                <div class="col-inline-xs-6 middle">
                     <div class="price">$390.00</div>
                 </div>
             </div>
@@ -401,10 +441,10 @@
         <div class="product-item-title"><a href="javascript:;">Название товара 1</a></div>
         <div class="product-item-price">
             <div class="row-inline">
-                <div class="col-inline-6 middle">
+                <div class="col-inline-xs-6 middle">
                     <div class="old-price">$490.00</div>
                 </div>
-                <div class="col-inline-6 middle">
+                <div class="col-inline-xs-6 middle">
                     <div class="price">$390.00</div>
                 </div>
             </div>
@@ -441,10 +481,10 @@
         <div class="product-item-title"><a href="javascript:;">Название товара 1</a></div>
         <div class="product-item-price">
             <div class="row-inline">
-                <div class="col-inline-6 middle">
+                <div class="col-inline-xs-6 middle">
                     <div class="old-price">$490.00</div>
                 </div>
-                <div class="col-inline-6 middle">
+                <div class="col-inline-xs-6 middle">
                     <div class="price">$390.00</div>
                 </div>
             </div>
@@ -481,10 +521,10 @@
         <div class="product-item-title"><a href="javascript:;">Название товара 1</a></div>
         <div class="product-item-price">
             <div class="row-inline">
-                <div class="col-inline-6 middle">
+                <div class="col-inline-xs-6 middle">
                     <div class="old-price">$490.00</div>
                 </div>
-                <div class="col-inline-6 middle">
+                <div class="col-inline-xs-6 middle">
                     <div class="price">$390.00</div>
                 </div>
             </div>
@@ -521,10 +561,10 @@
         <div class="product-item-title"><a href="javascript:;">Название товара 1</a></div>
         <div class="product-item-price">
             <div class="row-inline">
-                <div class="col-inline-6 middle">
+                <div class="col-inline-xs-6 middle">
                     <div class="old-price">$490.00</div>
                 </div>
-                <div class="col-inline-6 middle">
+                <div class="col-inline-xs-6 middle">
                     <div class="price">$390.00</div>
                 </div>
             </div>
@@ -561,10 +601,10 @@
         <div class="product-item-title"><a href="javascript:;">Название товара 1</a></div>
         <div class="product-item-price">
             <div class="row-inline">
-                <div class="col-inline-6 middle">
+                <div class="col-inline-xs-6 middle">
                     <div class="old-price">$490.00</div>
                 </div>
-                <div class="col-inline-6 middle">
+                <div class="col-inline-xs-6 middle">
                     <div class="price">$390.00</div>
                 </div>
             </div>
@@ -626,12 +666,12 @@
     <section class="section footer-content">
         <div class="container">
             <div class="row-inline">
-                <div class="col-inline-1 middle">
+                <div class="col-inline-xs-1 middle">
                     <figure class="footer-logo">
                         <a href="javascript:;"><img src="https://placehold.it/200" width="100" height="50" alt="demo-site" title="demo-site"></a>
                     </figure>
                 </div>
-                <div class="col-inline-5 middle">
+                <div class="col-inline-xs-5 middle">
                     <div class="footer-menu">
                         <ul class="footer-menu-list">
                             <li class="footer-menu-child"><a href="javascript:;" class="footer-menu-link">Пункт 1</a></li>
@@ -642,7 +682,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-inline-3 middle">
+                <div class="col-inline-xs-3 middle">
                     <div class="social">
                         <ul class="social-list">
                             <li class="social-child"><a href="javascript:;" class="social-link"><i class="fa fa-facebook"></i></a></li>
@@ -651,7 +691,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-inline-3 middle">
+                <div class="col-inline-xs-3 middle">
                     <div class="footer-contact">
                         <p><a href="mailto:mail@mail.com">mail@mail.com</a></p>
                         <p><a href="tel:(093) 333-44-00"><span itemprop="telephone">(093) 333-44-00</span></a></p>
@@ -701,10 +741,10 @@
                 </form>
                 <div class="social">
                     <div class="row-inline">
-                        <div class="col-inline-4 middle">
+                        <div class="col-inline-xs-4 middle">
                             <div class="social-title">Вход через соцсети:</div>
                         </div>
-                        <div class="col-inline-8 middle">
+                        <div class="col-inline-xs-8 middle">
                             <ul class="social-list">
                                 <li class="social-child"><a href="javascript:;" class="social-link"><i class="fa fa-facebook"></i></a></li>
                                 <li class="social-child"><a href="javascript:;" class="social-link"><i class="fa fa-vk"></i></a></li>
@@ -749,10 +789,10 @@
                 </form>
                 <div class="social">
                     <div class="row-inline">
-                        <div class="col-inline-4 middle">
+                        <div class="col-inline-xs-4 middle">
                             <div class="social-title">Вход через соцсети:</div>
                         </div>
-                        <div class="col-inline-8 middle">
+                        <div class="col-inline-xs-8 middle">
                             <ul class="social-list">
                                 <li class="social-child"><a href="javascript:;" class="social-link"><i class="fa fa-facebook"></i></a></li>
                                 <li class="social-child"><a href="javascript:;" class="social-link"><i class="fa fa-vk"></i></a></li>

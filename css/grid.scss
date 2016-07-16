@@ -18,9 +18,8 @@ $screen-min-sm: 768px;
 $screen-min-md: 992px;
 $screen-min-lg: 1200px;
 
-@mixin col-position($prefix-0,$prefix-1,$prefix-2,$prefix-3,$prefix-4,$prefix-5,$position-1,$position-2,$position-3) {
+@mixin col-position($prefix-1,$prefix-2,$prefix-3,$prefix-4,$prefix-5,$position-1,$position-2,$position-3) {
   @for $i from 1 to 12+1 {
-    .col-#{$prefix-0}-#{$i}.#{$position-1},
     .col-#{$prefix-1}-#{$i}.#{$position-1},
     .col-#{$prefix-2}-#{$i}.#{$position-1},
     .col-#{$prefix-3}-#{$i}.#{$position-1},
@@ -28,7 +27,6 @@ $screen-min-lg: 1200px;
     .col-#{$prefix-5}-#{$i}.#{$position-1} {
       vertical-align: $position-1;
     }
-    .col-#{$prefix-0}-#{$i}.#{$position-2},
     .col-#{$prefix-1}-#{$i}.#{$position-2},
     .col-#{$prefix-2}-#{$i}.#{$position-2},
     .col-#{$prefix-3}-#{$i}.#{$position-2},
@@ -36,7 +34,6 @@ $screen-min-lg: 1200px;
     .col-#{$prefix-5}-#{$i}.#{$position-2} {
       vertical-align: $position-2;
     }
-    .col-#{$prefix-0}-#{$i}.#{$position-3},
     .col-#{$prefix-1}-#{$i}.#{$position-3},
     .col-#{$prefix-2}-#{$i}.#{$position-3},
     .col-#{$prefix-3}-#{$i}.#{$position-3},
@@ -157,7 +154,6 @@ $screen-min-lg: 1200px;
     margin-right: -$grid-spacing/2;
     @include clearfix();
 }
-@include col-inline(inline);
 @include col-inline(inline-xs);
 @include responsive-inline($screen-min-sm, inline-sm);
 @include responsive-inline($screen-min-md, inline-md);
@@ -172,7 +168,7 @@ $screen-min-lg: 1200px;
 @include col-cell(cell);
 
 /*--------position---------*/
-@include col-position(inline,inline-xs,inline-sm,inline-md,inline-lg,cell,top,middle,bottom);
+@include col-position(inline-xs,inline-sm,inline-md,inline-lg,cell,top,middle,bottom);
 
 /*-------float col!--------*/
 .row {

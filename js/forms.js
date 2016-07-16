@@ -15,7 +15,98 @@ jQuery.validator.addMethod("birthday",
     "Please enter a valid value."
 );
 
+var Search = {
+
+    init: function() {
+        jQuery('.header-search button[type=submit]').val('').prop('disabled', true);
+        this.events();
+    },
+
+    goUp : function() {
+        var list = $('.live-search'),
+            options = list.find('.search-item'),
+            selected = list.find('.search-item.selected');
+
+        if (selected.index() == 0) {
+            options.removeClass('selected');
+            options.eq(0).addClass('selected');
+            list.scrollTop(0);
+            return false;
+        }
+
+        selected.removeClass('selected');
+        options.eq(selected.index() - 1).addClass('selected').focus();
+
+        list.scrollTop(list.scrollTop() - options.eq(selected.index()).innerHeight());
+    },
+
+    goDown : function() {
+        var list = $('.live-search'),
+            options = list.find('.search-item'),
+            selected = list.find('.search-item.selected'),
+            next = options.eq(selected.index() + 1);
+
+        if (!next.length) {
+            return false;
+        }
+
+        selected.removeClass('selected');
+        next.addClass('selected').focus();
+
+        list.scrollTop(list.scrollTop() + next.position().top);
+    },
+
+    events : function() {
+        jQuery('input[name="q"]').on('input', function(event) {
+            if ( jQuery(this).val().length > 3 ){
+                /*jQuery.ajax({
+                    type: "POST",
+                    url: '/search/live',
+                    cache: false,
+                    data: { q : jQuery('input[name="q"]').val() },
+                    dataType: 'json',
+                    success: function(response) {
+                        if (response.status) {
+                            jQuery('.live-search-container').html(jQuery(response.html));
+                            jQuery('.live-search').show();
+                        } else {
+                            jQuery('.live-search').hide();
+                        }
+                    },
+                    error: function () {
+                    }
+                });*/
+                jQuery('.live-search').show();
+            }
+
+            if (jQuery(this).val() && jQuery('.header-search button').prop('disabled')) {
+                jQuery('.header-search button').prop('disabled', false);
+            } else if (!jQuery(this).val()) {
+                jQuery('.header-search button').prop('disabled', true);
+                jQuery('.live-search').hide();
+            }
+        });
+
+        jQuery('input[name="q"]').on('keydown', function(event) {
+            if (event.keyCode == 38) {
+                Search.goUp();
+            } else if (event.keyCode == 40) {
+                Search.goDown();
+            }
+
+            if (event.keyCode == 13) {
+                if ( $('.search-item.selected').length ) {
+                    var href = $('.search-item.selected').find('.search-item-title a').attr('href');
+                    location.href = href;
+                    return false;
+                }
+            }
+        });
+    } //end events
+};
+
 var Auth = {
+
 	init : function () {
 		this.login();
         this.registration();
@@ -172,10 +263,50 @@ var Auth = {
             Popup.show('#login-popup');
         });
 	}
+};
 
+var Callback = {
+
+	init: function () {
+		this.validateForm();
+	},
+
+	validateForm : function() {
+		jQuery("[name=callback-form]").validate({
+			rules : {
+				name : {
+					required : true,
+					onlyLetters : true
+				},
+                tel : {
+					required : true
+				}
+			},
+			messages : {
+                name : {
+					required : '',
+					onlyLetters : ''
+				},
+                tel : {
+					required : ''
+				}
+			},
+			errorPlacement : function(error, element) {
+				//error.insertAfter(element);
+			},
+			submitHandler: function(form) {
+                if (true) {
+                    toastr.success('Успех');
+                } else {
+                    toastr.success('Ошибка');
+                }
+			}
+		});
+	}
 };
 
 var Feedback = {
+
 	init: function () {
 		this.validateForm();
 	},
@@ -212,10 +343,10 @@ var Feedback = {
 			}
 		});
 	}
-
 };
 
 var BuyOneClick = {
+
 	init: function () {
 		this.validateForm();
 	},
@@ -245,10 +376,10 @@ var BuyOneClick = {
 			}
 		});
 	}
-
 };
 
 var ProductReview = {
+
 	init: function () {
 		this.addReview();
         this.answerReview();
@@ -321,10 +452,10 @@ var ProductReview = {
 			}
 		});
 	}
-
 };
 
 var Checkout = {
+
 	init: function () {
 		this.validateForm();
         this.events();
@@ -383,10 +514,10 @@ var Checkout = {
             jQuery("[name=checkout-form]").submit();
         });
     }
-
 };
 
 var Profile = {
+
 	init: function () {
 		this.validateForm();
         this.validatePasswordForm();
@@ -503,5 +634,4 @@ var Profile = {
 			}
 		});
 	}
-
 };
