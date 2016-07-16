@@ -25,4 +25,14 @@ jQuery(function() {
       jQuery("#catalog-price").slider('values',0, jQuery('#catalog-price-lower').val());
    });
 
+   jQuery('#catalog-price-lower').on('input', function() {
+       var val = jQuery(this).val().replace(/[^0-9]/, '');
+       jQuery(this).val(val);
+   });
+
+   jQuery('#catalog-price-upper').on('input', function() {
+       var val = jQuery(this).val().replace(/[^0-9]/, '');
+       jQuery(this).val(val);
+   });
+
 });

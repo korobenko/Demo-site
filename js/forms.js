@@ -1,5 +1,10 @@
 'use strict';
 
+jQuery.fn.reset = function () {
+    this[0].reset();
+    return this
+};
+
 jQuery.validator.addMethod("onlyLetters",
     function(value, element, regexp) {
     	var re = new RegExp(/\d+/);
